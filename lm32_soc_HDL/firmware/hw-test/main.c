@@ -19,7 +19,9 @@ int main(){
 	
 	for(i=1; i<=10; i++) {
 		uart_putchar(i);    
+		i2c_write(ADDRESS_I2C,CH1,10);
 		nsleep(101630);
+		
 	}
 }
 

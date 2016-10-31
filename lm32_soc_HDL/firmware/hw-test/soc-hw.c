@@ -187,7 +187,7 @@ void rw(int data_rw)
 
 void i2c_write (int dirI2C, int dirIntern, int data)
 {		
-	start_Write(1);
+	start_Write(data);
 	msleep(1);
 	start_Write(0);
 	rw(0); 
@@ -205,3 +205,5 @@ int8_t i2c_read (int dirI2C, int dirIntern){
 	i2c0->data = ((dirI2C<<15)|(dirIntern<<7)|dirI2C);
 	return i2c0->i2c_data_out;
 }
+
+

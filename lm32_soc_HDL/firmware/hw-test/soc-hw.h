@@ -121,6 +121,11 @@ char spi_getchar();
 /***************************************************************************
  * I2C0
  */
+#define ADDRESS_I2C	0x68
+#define CH1 		0x40 
+#define CH2	        0x44
+#define CH3	        0x48
+#define CH4 		0x52
 
 typedef struct {  
    volatile uint32_t i2c_data_out;

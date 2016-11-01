@@ -1,42 +1,51 @@
 //---------------------------------------------------------------------------
 // LatticeMico32 System On A Chip
 //
-// Top Level Design for the Nexys4 ferney
+// Top Level Design for the Xilinx Artix-7 Starter Kit
 //---------------------------------------------------------------------------
 
 module system
 #(
 //	parameter   bootram_file     = "../firmware/cain_loader/image.ram",
 //	parameter   bootram_file     = "../firmware/arch_examples/image.ram",
-//	parameter   bootram_file     = "../firmware/boot0-serial/image.ram",
 	parameter   bootram_file     = "../firmware/hw-test/image.ram",
 	parameter   clk_freq         = 100000000,
 	parameter   uart_baud_rate   = 115200
 ) (
-	input             clk,
+	input             clk, 
 	// Debug 
-	output            led,
 	input             rst,
-
 	// UART
 	input             uart_rxd, 
 	output            uart_txd,
-	// SPI
-	input             spi_miso, 
-	output            spi_mosi,
-	output            spi_clk,
-	// 12c
-	inout             i2c_sda, 
-	inout             i2c_scl
-	
+	output            led,
+	// UART1	
+	input             uart_rxd1, 
+	output            uart_txd1,
+	output            led1,
 
+        // CPU Interface
+        input             [12:0] addr,
+        input             [7:0]  sram_data,
+        input             nwe,
+        input             noe,
+        input             ncs,
+        // PWM
+	output	          [3:0]PWMmotors,	
+	output		  [3:0]ledMotors,
+        // I2C
+	inout		sda, 
+	output		scl
+	//output		doneR,
+	//output		doneW,
+	//output		busyR,
+	//output		busyW
+	//output 		[6:0]i2c_data_out
+	//output		ack
+
+
+  
 );
-
-
-wire sys_clk = clk;
-wire sys_clk_n = ~clk;
-
-
 	
 //------------------------------------------------------------------
 // Whishbone Wires
@@ -49,11 +58,11 @@ wire  [31:0] gnd32 = 32'h00000000;
 wire [31:0]  lm32i_adr,
              lm32d_adr,
              uart0_adr,
-             spi0_adr,
-             i2c0_adr,
+	     uart1_adr,
              timer0_adr,
+	     pwm0_adr,
              gpio0_adr,
-             ddr0_adr,
+             i2c0_adr,  //yo
              bram0_adr,
              sram0_adr;
 
@@ -64,78 +73,75 @@ wire [31:0]  lm32i_dat_r,
              lm32d_dat_w,
              uart0_dat_r,
              uart0_dat_w,
-             spi0_dat_r,
-             spi0_dat_w,
-             i2c0_dat_r,
-             i2c0_dat_w,
+	     uart1_dat_r,
+	     uart1_dat_w,
              timer0_dat_r,
              timer0_dat_w,
+	     pwm0_dat_r,
+	     pwm0_dat_w,
              gpio0_dat_r,
              gpio0_dat_w,
+             i2c0_dat_r,   //yo
+             i2c0_dat_w,   //yo
              bram0_dat_r,
              bram0_dat_w,
              sram0_dat_w,
-             sram0_dat_r,
-             ddr0_dat_w,
-             ddr0_dat_r;
+             sram0_dat_r;
 
 wire [3:0]   lm32i_sel,
              lm32d_sel,
              uart0_sel,
-             spi0_sel,
-             i2c0_sel,
+	     uart1_sel,
              timer0_sel,
+	     pwm0_sel,
              gpio0_sel,
+             i2c0_sel,  //yo
              bram0_sel,
-             sram0_sel,
-             ddr0_sel;
+             sram0_sel;
 
 wire         lm32i_we,
              lm32d_we,
              uart0_we,
-             spi0_we,
-             i2c0_we,
+	     uart1_we,
              timer0_we,
+	     pwm0_we,
              gpio0_we,
+             i2c0_we,  //yo
              bram0_we,
-             sram0_we,
-             ddr0_we;
-
+             sram0_we;
 
 wire         lm32i_cyc,
              lm32d_cyc,
              uart0_cyc,
-             spi0_cyc,
-             i2c0_cyc,
+	     uart1_cyc,
              timer0_cyc,
+	     pwm0_cyc,
              gpio0_cyc,
+             i2c0_cyc, //yo
              bram0_cyc,
-             sram0_cyc,
-             ddr0_cyc;
-
+             sram0_cyc;
 
 wire         lm32i_stb,
              lm32d_stb,
              uart0_stb,
-             spi0_stb,
-             i2c0_stb,
+	     uart1_stb,
              timer0_stb,
+	     pwm0_stb,
              gpio0_stb,
+             i2c0_stb, //yo
              bram0_stb,
-             sram0_stb,
-             ddr0_stb;
+             sram0_stb;
 
 wire         lm32i_ack,
              lm32d_ack,
              uart0_ack,
-             spi0_ack,
-             i2c0_ack,
+	     uart1_ack,
              timer0_ack,
+	     pwm0_ack,
              gpio0_ack,
+             i2c0_ack,  //yo
              bram0_ack,
-             sram0_ack,
-             ddr0_ack;
-
+             sram0_ack;
 
 wire         lm32i_rty,
              lm32d_rty;
@@ -159,6 +165,7 @@ wire [31:0]  intr_n;
 wire         uart0_intr = 0;
 wire   [1:0] timer0_intr;
 wire         gpio0_intr;
+wire         pwm0_intr;
 
 assign intr_n = { 28'hFFFFFFF, ~timer0_intr[1], ~gpio0_intr, ~timer0_intr[0], ~uart0_intr };
 
@@ -167,12 +174,13 @@ assign intr_n = { 28'hFFFFFFF, ~timer0_intr[1], ~gpio0_intr, ~timer0_intr[0], ~u
 //---------------------------------------------------------------------------
 conbus #(
 	.s_addr_w(3),
-	.s0_addr(3'b000),	// bram     0x00000000 
-	.s1_addr(3'b010),	// uart0    0x20000000 
-	.s2_addr(3'b011),	// timer    0x30000000 
-	.s3_addr(3'b100),   // gpio     0x40000000 
-	.s4_addr(3'b101),	// spi      0x50000000 
-	.s5_addr(3'b110)	// i2c      0x60000000 
+	.s0_addr(3'b000),      // bram     0x00000000 
+	.s1_addr(3'b010),      // uart     0x20000000 
+	.s2_addr(3'b011),      // timer    0x30000000 
+	.s3_addr(3'b100),      // gpio	   0x40000000 
+    	.s4_addr(3'b101),      // i2c      0x50000000
+	.s5_addr(3'b110),      // uart1    0x60000000
+	.s6_addr(3'b111)       // pwm      0x70000000
 ) conbus0(
 	.sys_clk( clk ),
 	.sys_rst( ~rst ),
@@ -195,8 +203,7 @@ conbus #(
 	.m1_stb_i(  lm32d_stb    ),
 	.m1_ack_o(  lm32d_ack    ),
 
-
-	// Slave0  bram
+	// Slave0
 	.s0_dat_i(  bram0_dat_r ),
 	.s0_dat_o(  bram0_dat_w ),
 	.s0_adr_o(  bram0_adr   ),
@@ -232,25 +239,33 @@ conbus #(
 	.s3_cyc_o(  gpio0_cyc   ),
 	.s3_stb_o(  gpio0_stb   ),
 	.s3_ack_i(  gpio0_ack   ),
-	// Slave4
-	.s4_dat_i(  spi0_dat_r ),
-	.s4_dat_o(  spi0_dat_w ),
-	.s4_adr_o(  spi0_adr   ),
-	.s4_sel_o(  spi0_sel   ),
-	.s4_we_o(   spi0_we    ),
-	.s4_cyc_o(  spi0_cyc   ),
-	.s4_stb_o(  spi0_stb   ),
-	.s4_ack_i(  spi0_ack   ),
+        // Slave4
+	.s4_dat_i(  i2c0_dat_r ),
+	.s4_dat_o(  i2c0_dat_w ),
+	.s4_adr_o(  i2c0_adr   ),
+	.s4_sel_o(  i2c0_sel   ),
+	.s4_we_o(   i2c0_we    ),
+	.s4_cyc_o(  i2c0_cyc   ),
+	.s4_stb_o(  i2c0_stb   ),
+	.s4_ack_i(  i2c0_ack   ),
 	// Slave5
-	.s5_dat_i(  i2c0_dat_r ),
-	.s5_dat_o(  i2c0_dat_w ),
-	.s5_adr_o(  i2c0_adr   ),
-	.s5_sel_o(  i2c0_sel   ),
-	.s5_we_o(   i2c0_we    ),
-	.s5_cyc_o(  i2c0_cyc   ),
-	.s5_stb_o(  i2c0_stb   ),
-	.s5_ack_i(  i2c0_ack   )
-	
+	.s5_dat_i(  uart1_dat_r ),
+	.s5_dat_o(  uart1_dat_w ),
+	.s5_adr_o(  uart1_adr   ),
+	.s5_sel_o(  uart1_sel   ),
+	.s5_we_o(   uart1_we    ),
+	.s5_cyc_o(  uart1_cyc   ),
+	.s5_stb_o(  uart1_stb   ),
+	.s5_ack_i(  uart1_ack   ),
+	// Slave6
+	.s6_dat_i(  pwm0_dat_r ),
+	.s6_dat_o(  pwm0_dat_w ),
+	.s6_adr_o(  pwm0_adr   ),
+	.s6_sel_o(  pwm0_sel   ),
+	.s6_we_o(   pwm0_we    ),
+	.s6_cyc_o(  pwm0_cyc   ),
+	.s6_stb_o(  pwm0_stb   ),
+	.s6_ack_i(  pwm0_ack   )
 );
 
 
@@ -338,6 +353,37 @@ wb_uart #(
 	.uart_rxd( uart0_rxd ),
 	.uart_txd( uart0_txd )
 );
+
+//---------------------------------------------------------------------------
+// uart1
+//---------------------------------------------------------------------------
+wire uart1_rxd;
+wire uart1_txd;
+
+wb_uart #(
+	.clk_freq( clk_freq        ),
+	.baud(     uart_baud_rate  )
+) uart1 (
+	.clk( clk ),
+	.reset( ~rst ),
+	//
+	.wb_adr_i( uart1_adr ),
+	.wb_dat_i( uart1_dat_w ),
+	.wb_dat_o( uart1_dat_r ),
+	.wb_stb_i( uart1_stb ),
+	.wb_cyc_i( uart1_cyc ),
+	.wb_we_i(  uart1_we ),
+	.wb_sel_i( uart1_sel ),
+	.wb_ack_o( uart1_ack ), 
+//	.intr(       uart1_intr ),
+	.uart_rxd( uart1_rxd ),
+	.uart_txd( uart1_txd )
+);
+
+assign uart_txd1  = uart1_txd;
+assign uart1_rxd = uart_rxd1;
+assign led1      = ~uart_txd1;
+
 
 //---------------------------------------------------------------------------
 // spi0
@@ -432,10 +478,6 @@ wb_gpio gpio0 (
 assign uart_txd  = uart0_txd;
 assign uart0_rxd = uart_rxd;
 assign led       = ~uart_txd;
-
-assign spi_mosi  = spi0_mosi;
-assign spi0_miso = spi_miso;
-assign spi_clk = spi0_clk;
 
 assign i2c_sda = i2c0_sda;
 assign i2c_scl = i2c0_scl;

@@ -7,7 +7,7 @@ TIMESPEC TS_sys_clk = PERIOD sys_clk_pin 100 MHz HIGH 50%;
 
 NET "rst"	LOC = "C12"	| IOSTANDARD = "LVCMOS33";
 NET "led"	LOC = "T8"	| IOSTANDARD = "LVCMOS33";
-NET "led1"	LOC = "T8"	| IOSTANDARD = "LVCMOS33";
+NET "led1"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";
 
 
 
@@ -15,8 +15,8 @@ NET "led1"	LOC = "T8"	| IOSTANDARD = "LVCMOS33";
 NET "uart_txd"	LOC = "D4"	| IOSTANDARD = "LVCMOS33";		
 NET "uart_rxd"	LOC = "C4"	| IOSTANDARD = "LVCMOS33";
 
-NET "uart_txd1"	LOC = "D4"	| IOSTANDARD = "LVCMOS33";		
-NET "uart_rxd1"	LOC = "C4"	| IOSTANDARD = "LVCMOS33";		
+NET "uart_txd1"	LOC = "B13"	| IOSTANDARD = "LVCMOS33";		
+NET "uart_rxd1"	LOC = "E17"	| IOSTANDARD = "LVCMOS33";		
 
 # ==== I2C ====
 #NET "i2c_sda"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";		

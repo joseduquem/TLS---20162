@@ -4,13 +4,13 @@
 
 #include "soc-hw.h"
 
-int main(){
+void main(){
 	/*char a;
 	for(a=1; a<8; a++){
 		a=a+1;
 		uart_putchar(a);
 	}*/
-	isr_init();
+	/*isr_init();
 	tic_init();
 	irq_enable();
 	
@@ -22,7 +22,13 @@ int main(){
 		i2c_write(ADDRESS_I2C,CH1,10);
 		nsleep(101630);
 		
-	}
+	}*/
+
+	uart_putstr("AT+CIPMUX=0\r\n");
+	uart_putstr("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
+	uart_putstr("AT+CIPSEND=4\r\n");
+	uart_putstr("HO\r\n");
+	
 }
 
 /*inline void writeint(uint32_t val)

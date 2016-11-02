@@ -8,7 +8,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Nov  1 12:50:04 2016
+Mapped Date    : Tue Nov  1 20:44:05 2016
 
 Design Summary
 --------------
@@ -105,8 +105,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                3.87
 
 Peak Memory Usage:  1275 MB
-Total REAL time to MAP completion:  48 secs 
-Total CPU time to MAP completion:   48 secs 
+Total REAL time to MAP completion:  46 secs 
+Total CPU time to MAP completion:   46 secs 
 
 Table of Contents
 -----------------
@@ -133,7 +133,7 @@ Section 2 - Warnings
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network addr<12> has no load.
-INFO:LIT:395 - The above info message is repeated 97 more times for the
+INFO:LIT:395 - The above info message is repeated 89 more times for the
    following (max. 5 shown):
    addr<11>,
    addr<10>,

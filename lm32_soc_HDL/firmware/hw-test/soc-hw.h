@@ -98,6 +98,7 @@ void uart_putchar(char c);
 void uart_putstr(char *str);
 char uart_getchar();
 //UART1
+void uart_init1();
 void uart_putchar1(char c);
 void uart_putstr1(char *str);
 char uart_getchar1();
@@ -149,6 +150,7 @@ void rw(int data_rw);
  */
 extern timer_t  *timer0;
 extern uart_t   *uart0; 
+extern uart_t   *uart1;
 extern gpio_t   *gpio0; 
 extern uint32_t *sram0; 
 

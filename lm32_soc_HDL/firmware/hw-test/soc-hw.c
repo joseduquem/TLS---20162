@@ -1,11 +1,11 @@
 #include "soc-hw.h"
 
-uart_t  *uart0  = (uart_t *)   0x20000000;
-timer_t *timer0 = (timer_t *)  0x30000000;
-gpio_t  *gpio0  = (gpio_t *)   0x40000000;
-spi_t   *spi0   = (spi_t *)    0x50000000;
-i2c_t   *i2c0   = (i2c_t *)    0x60000000;
-uart_t  *uart1  = (uart_t *)   0x70000000;
+uart_t  *uart0  = (uart_t *)   	0x20000000;
+timer_t *timer0 = (timer_t *)   0x30000000;
+gpio_t *gpio0 	= (gpio_t *)	0x40000000;
+i2c_t   *i2c0   = (i2c_t *)    	0x50000000;
+uart_t  *uart1  = (uart_t *)  	0x60000000;
+//pwm_t *pwm0     = (pwm_t *)     0x70000000;
 
 isr_ptr_t isr_table[32];
 
@@ -138,12 +138,12 @@ void uart_putstr(char *str)
  */
 void uart_init1()
 {
-	//uart0->ier = 0x00;  // Interrupt Enable Register
-	//uart0->lcr = 0x03;  // Line Control Register:    8N1
-	//uart0->mcr = 0x00;  // Modem Control Register
+	//uart1->ier = 0x00;  // Interrupt Enable Register
+	//uart1->lcr = 0x03;  // Line Control Register:    8N1
+	//uart1->mcr = 0x00;  // Modem Control Register
 
 	// Setup Divisor register (Fclk / Baud)
-	//uart0->div = (FCPU/(57600*16));
+	//uart1->div = (FCPU/(57600*16));
 }
 
 char uart_getchar1()

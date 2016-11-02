@@ -15,7 +15,7 @@ module system
 	input             clk, 
 	// Debug 
 	input             rst,
-	// UART
+	// UART0
 	input             uart_rxd, 
 	output            uart_txd,
 	output            led,
@@ -30,9 +30,6 @@ module system
         input             nwe,
         input             noe,
         input             ncs,
-        // PWM
-	output	          [3:0]PWMmotors,	
-	output		  [3:0]ledMotors,
         // I2C
 	inout		sda, 
 	output		scl
@@ -354,6 +351,10 @@ wb_uart #(
 	.uart_txd( uart0_txd )
 );
 
+assign uart_txd  = uart0_txd;
+assign uart0_rxd = uart_rxd;
+assign led       = ~uart_txd;
+
 //---------------------------------------------------------------------------
 // uart1
 //---------------------------------------------------------------------------
@@ -475,9 +476,6 @@ wb_gpio gpio0 (
 //----------------------------------------------------------------------------
 // Mux UART wires according to sw[0]
 //----------------------------------------------------------------------------
-assign uart_txd  = uart0_txd;
-assign uart0_rxd = uart_rxd;
-assign led       = ~uart_txd;
 
 assign i2c_sda = i2c0_sda;
 assign i2c_scl = i2c0_scl;

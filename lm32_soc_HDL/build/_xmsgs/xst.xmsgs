@@ -5,37 +5,37 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 172: Port <arg fmt="%s" index="1">m0_cti_i</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 171: Port <arg fmt="%s" index="1">m0_cti_i</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 396: Port <arg fmt="%s" index="1">spi_cs</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 394: Port <arg fmt="%s" index="1">spi_cs</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 419: Port <arg fmt="%s" index="1">arst_i</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 417: Port <arg fmt="%s" index="1">arst_i</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 234: Assignment to <arg fmt="%s" index="1">gpio0_sel</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 233: Assignment to <arg fmt="%s" index="1">gpio0_sel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 243: Assignment to <arg fmt="%s" index="1">i2c0_sel</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 242: Assignment to <arg fmt="%s" index="1">i2c0_sel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 259: Assignment to <arg fmt="%s" index="1">pwm0_dat_w</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 258: Assignment to <arg fmt="%s" index="1">pwm0_dat_w</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 260: Assignment to <arg fmt="%s" index="1">pwm0_adr</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 259: Assignment to <arg fmt="%s" index="1">pwm0_adr</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 261: Assignment to <arg fmt="%s" index="1">pwm0_sel</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 260: Assignment to <arg fmt="%s" index="1">pwm0_sel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 262: Assignment to <arg fmt="%s" index="1">pwm0_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 261: Assignment to <arg fmt="%s" index="1">pwm0_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 263: Assignment to <arg fmt="%s" index="1">pwm0_cyc</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 262: Assignment to <arg fmt="%s" index="1">pwm0_cyc</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 264: Assignment to <arg fmt="%s" index="1">pwm0_stb</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 263: Assignment to <arg fmt="%s" index="1">pwm0_stb</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/lm32/lm32_cpu.v" Line 461: Assignment to <arg fmt="%s" index="1">pc_x</arg> ignored, since the identifier is never used
@@ -50,22 +50,22 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to <arg fmt="%s" index="1">x_result_sel_logic_x</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 285: Assignment to <arg fmt="%s" index="1">lm32i_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 284: Assignment to <arg fmt="%s" index="1">lm32i_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 286: Assignment to <arg fmt="%s" index="1">lm32i_lock</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 285: Assignment to <arg fmt="%s" index="1">lm32i_lock</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 287: Assignment to <arg fmt="%s" index="1">lm32i_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 286: Assignment to <arg fmt="%s" index="1">lm32i_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 299: Assignment to <arg fmt="%s" index="1">lm32d_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 298: Assignment to <arg fmt="%s" index="1">lm32d_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 300: Assignment to <arg fmt="%s" index="1">lm32d_lock</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 299: Assignment to <arg fmt="%s" index="1">lm32d_lock</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 301: Assignment to <arg fmt="%s" index="1">lm32d_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 300: Assignment to <arg fmt="%s" index="1">lm32d_bte</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/lac/uart.v" Line 39: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
@@ -89,28 +89,28 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/wb_spi/wb_spi.v" Line 63: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_adr_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 398: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_adr_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 401: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 399: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 402: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_o</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_o</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 402: Assignment to <arg fmt="%s" index="1">spi0_dat_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Assignment to <arg fmt="%s" index="1">spi0_dat_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 406: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_sel_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 404: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_sel_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 407: Assignment to <arg fmt="%s" index="1">spi0_ack</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 405: Assignment to <arg fmt="%s" index="1">spi0_ack</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 408: Assignment to <arg fmt="%s" index="1">spi0_clk</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 406: Assignment to <arg fmt="%s" index="1">spi0_clk</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 409: Assignment to <arg fmt="%s" index="1">spi0_mosi</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 407: Assignment to <arg fmt="%s" index="1">spi0_mosi</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1308" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/wb_i2c/i2c_master_byte_ctrl.v" Line 257: Found full_case directive in module <arg fmt="%s" index="1">i2c_master_byte_ctrl</arg>. Use of full_case directives may cause differences between RTL and post-synthesis simulation
@@ -119,73 +119,73 @@
 <msg type="warning" file="HDLCompiler" num="1308" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/wb_i2c/i2c_master_bit_ctrl.v" Line 376: Found full_case directive in module <arg fmt="%s" index="1">i2c_master_bit_ctrl</arg>. Use of full_case directives may cause differences between RTL and post-synthesis simulation
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 423: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_adr_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">3</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 421: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_adr_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">3</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 424: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 422: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_i</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 425: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_o</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 423: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">wb_dat_o</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 480: Assignment to <arg fmt="%s" index="1">i2c_sda</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 478: Assignment to <arg fmt="%s" index="1">i2c_sda</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 481: Assignment to <arg fmt="%s" index="1">i2c_scl</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 479: Assignment to <arg fmt="%s" index="1">i2c_scl</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 77: Net &lt;<arg fmt="%s" index="1">pwm0_dat_r[31]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 76: Net &lt;<arg fmt="%s" index="1">pwm0_dat_r[31]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 137: Net &lt;<arg fmt="%s" index="1">pwm0_ack</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 136: Net &lt;<arg fmt="%s" index="1">pwm0_ack</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 143: Net &lt;<arg fmt="%s" index="1">lm32i_rty</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 142: Net &lt;<arg fmt="%s" index="1">lm32i_rty</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 144: Net &lt;<arg fmt="%s" index="1">lm32d_rty</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 143: Net &lt;<arg fmt="%s" index="1">lm32d_rty</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 146: Net &lt;<arg fmt="%s" index="1">lm32i_err</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 145: Net &lt;<arg fmt="%s" index="1">lm32i_err</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 147: Net &lt;<arg fmt="%s" index="1">lm32d_err</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 146: Net &lt;<arg fmt="%s" index="1">lm32d_err</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 164: Net &lt;<arg fmt="%s" index="1">gpio0_intr</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 163: Net &lt;<arg fmt="%s" index="1">gpio0_intr</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 393: Net &lt;<arg fmt="%s" index="1">spi0_miso</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 391: Net &lt;<arg fmt="%s" index="1">spi0_miso</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Net &lt;<arg fmt="%s" index="1">spi0_adr</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 398: Net &lt;<arg fmt="%s" index="1">spi0_adr</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 401: Net &lt;<arg fmt="%s" index="1">spi0_dat_w</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 399: Net &lt;<arg fmt="%s" index="1">spi0_dat_w</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 403: Net &lt;<arg fmt="%s" index="1">spi0_stb</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 401: Net &lt;<arg fmt="%s" index="1">spi0_stb</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 404: Net &lt;<arg fmt="%s" index="1">spi0_cyc</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 402: Net &lt;<arg fmt="%s" index="1">spi0_cyc</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 405: Net &lt;<arg fmt="%s" index="1">spi0_we</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 403: Net &lt;<arg fmt="%s" index="1">spi0_we</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 406: Net &lt;<arg fmt="%s" index="1">spi0_sel</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 404: Net &lt;<arg fmt="%s" index="1">spi0_sel</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 181: Input port <arg fmt="%s" index="1">m0_cti_i[2]</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 180: Input port <arg fmt="%s" index="1">m0_cti_i[2]</arg> is not connected on this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 419: Input port <arg fmt="%s" index="1">arst_i</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="new" >"/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 417: Input port <arg fmt="%s" index="1">arst_i</arg> is not connected on this instance
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/lm32/lm32_cpu.v</arg>&quot; line <arg fmt="%d" index="2">483</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">simtrace</arg>&gt; of block &lt;<arg fmt="%s" index="4">lm32_simtrace</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">lm32_cpu</arg>&gt;. Underlying logic will be removed.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%d" index="2">396</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">spi0</arg>&gt; of block &lt;<arg fmt="%s" index="4">wb_spi</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">system</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%d" index="2">394</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">spi0</arg>&gt; of block &lt;<arg fmt="%s" index="4">wb_spi</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">system</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="2898" delta="new" >Port &apos;<arg fmt="%s" index="1">m0_cti_i</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">conbus0</arg>&apos;, is tied to GND.
@@ -212,85 +212,85 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">ncs</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s0_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s0_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s1_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s1_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s2_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s2_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s3_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s3_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s3_sel_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s3_sel_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s4_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s4_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s4_sel_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s4_sel_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s5_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s5_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_dat_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_dat_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_adr_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_adr_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_cti_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_sel_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_sel_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_we_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_we_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_cyc_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_cyc_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">181</arg>: Output port &lt;<arg fmt="%s" index="3">s6_stb_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">180</arg>: Output port &lt;<arg fmt="%s" index="3">s6_stb_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">conbus0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">272</arg>: Output port &lt;<arg fmt="%s" index="3">I_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">271</arg>: Output port &lt;<arg fmt="%s" index="3">I_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">272</arg>: Output port &lt;<arg fmt="%s" index="3">I_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">271</arg>: Output port &lt;<arg fmt="%s" index="3">I_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">272</arg>: Output port &lt;<arg fmt="%s" index="3">D_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">271</arg>: Output port &lt;<arg fmt="%s" index="3">D_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">272</arg>: Output port &lt;<arg fmt="%s" index="3">D_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">271</arg>: Output port &lt;<arg fmt="%s" index="3">D_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">272</arg>: Output port &lt;<arg fmt="%s" index="3">I_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">271</arg>: Output port &lt;<arg fmt="%s" index="3">I_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">272</arg>: Output port &lt;<arg fmt="%s" index="3">D_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">271</arg>: Output port &lt;<arg fmt="%s" index="3">D_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">396</arg>: Output port &lt;<arg fmt="%s" index="3">wb_dat_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">394</arg>: Output port &lt;<arg fmt="%s" index="3">wb_dat_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">396</arg>: Output port &lt;<arg fmt="%s" index="3">spi_cs</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">394</arg>: Output port &lt;<arg fmt="%s" index="3">spi_cs</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">396</arg>: Output port &lt;<arg fmt="%s" index="3">wb_ack_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">394</arg>: Output port &lt;<arg fmt="%s" index="3">wb_ack_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">396</arg>: Output port &lt;<arg fmt="%s" index="3">spi_sck</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">394</arg>: Output port &lt;<arg fmt="%s" index="3">spi_sck</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">396</arg>: Output port &lt;<arg fmt="%s" index="3">spi_mosi</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">394</arg>: Output port &lt;<arg fmt="%s" index="3">spi_mosi</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">spi0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">419</arg>: Output port &lt;<arg fmt="%s" index="3">wb_inta_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v</arg>&quot; line <arg fmt="%s" index="2">417</arg>: Output port &lt;<arg fmt="%s" index="3">wb_inta_o</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">pwm0_dat_r</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.

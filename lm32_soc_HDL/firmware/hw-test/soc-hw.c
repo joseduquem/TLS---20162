@@ -149,13 +149,13 @@ void uart_init1()
 char uart_getchar1()
 {   
 	while (! (uart1->ucr & UART_DR)) ;
-	return uart0->rxtx;
+	return uart1->rxtx;
 }
 
 void uart_putchar1(char c)
 {
 	while (uart1->ucr & UART_BUSY) ;
-	uart0->rxtx = c;
+	uart1->rxtx = c;
 }
 
 void uart_putstr1(char *str)

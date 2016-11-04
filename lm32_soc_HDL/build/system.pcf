@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 01 20:44:50 2016
+// Written by: Map P.20131013 on Thu Nov 03 12:48:01 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -10,7 +10,6 @@ COMP "clk" LOCATE = SITE "E3" LEVEL 1;
 COMP "uart_rxd" LOCATE = SITE "C4" LEVEL 1;
 COMP "led" LOCATE = SITE "T8" LEVEL 1;
 COMP "uart_rxd1" LOCATE = SITE "E17" LEVEL 1;
-COMP "led1" LOCATE = SITE "V9" LEVEL 1;
 PIN bram0/Mram_ram_pins<63> = BEL "bram0/Mram_ram" PINNAME CLKARDCLKU;
 PIN bram0/Mram_ram_pins<62> = BEL "bram0/Mram_ram" PINNAME CLKARDCLKL;
 TIMEGRP sys_clk = BEL "conbus0/conbus_arb/state_FSM_FFd3" BEL

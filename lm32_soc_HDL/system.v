@@ -22,8 +22,7 @@ module system
 	// UART1	
 	input             uart_rxd1, 
 	output            uart_txd1,
-	output            led1,
-
+	
         // CPU Interface
         input             [12:0] addr,
         input             [7:0]  sram_data,
@@ -69,8 +68,8 @@ wire [31:0]  lm32i_dat_r,
              lm32d_dat_r,
              lm32d_dat_w,
              uart0_dat_r,
-             uart0_dat_w,
 	     uart1_dat_r,
+             uart0_dat_w,
 	     uart1_dat_w,
              timer0_dat_r,
              timer0_dat_w,
@@ -78,8 +77,8 @@ wire [31:0]  lm32i_dat_r,
 	     pwm0_dat_w,
              gpio0_dat_r,
              gpio0_dat_w,
-             i2c0_dat_r,   //yo
-             i2c0_dat_w,   //yo
+             i2c0_dat_r,   
+             i2c0_dat_w,   
              bram0_dat_r,
              bram0_dat_w,
              sram0_dat_w,
@@ -92,7 +91,7 @@ wire [3:0]   lm32i_sel,
              timer0_sel,
 	     pwm0_sel,
              gpio0_sel,
-             i2c0_sel,  //yo
+             i2c0_sel,  
              bram0_sel,
              sram0_sel;
 
@@ -103,7 +102,7 @@ wire         lm32i_we,
              timer0_we,
 	     pwm0_we,
              gpio0_we,
-             i2c0_we,  //yo
+             i2c0_we,  
              bram0_we,
              sram0_we;
 
@@ -114,7 +113,7 @@ wire         lm32i_cyc,
              timer0_cyc,
 	     pwm0_cyc,
              gpio0_cyc,
-             i2c0_cyc, //yo
+             i2c0_cyc, 
              bram0_cyc,
              sram0_cyc;
 
@@ -125,7 +124,7 @@ wire         lm32i_stb,
              timer0_stb,
 	     pwm0_stb,
              gpio0_stb,
-             i2c0_stb, //yo
+             i2c0_stb, 
              bram0_stb,
              sram0_stb;
 
@@ -136,7 +135,7 @@ wire         lm32i_ack,
              timer0_ack,
 	     pwm0_ack,
              gpio0_ack,
-             i2c0_ack,  //yo
+             i2c0_ack,  
              bram0_ack,
              sram0_ack;
 
@@ -383,7 +382,6 @@ wb_uart #(
 
 assign uart_txd1  = uart1_txd;
 assign uart1_rxd = uart_rxd1;
-assign led1      = ~uart_txd1;
 
 
 //---------------------------------------------------------------------------

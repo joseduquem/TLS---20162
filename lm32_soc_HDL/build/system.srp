@@ -147,23 +147,23 @@ Parsing module <conbus_arb>.
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 172: Port m0_cti_i is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 396: Port spi_cs is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 419: Port arst_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 171: Port m0_cti_i is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 394: Port spi_cs is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 417: Port arst_i is not connected to this instance
 
 Elaborating module <system>.
 
 Elaborating module <conbus(s_addr_w=3,s0_addr=3'b0,s1_addr=3'b010,s2_addr=3'b011,s3_addr=3'b100,s4_addr=3'b101,s5_addr=3'b110,s6_addr=3'b111)>.
 
 Elaborating module <conbus_arb>.
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 234: Assignment to gpio0_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 243: Assignment to i2c0_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 259: Assignment to pwm0_dat_w ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 260: Assignment to pwm0_adr ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 261: Assignment to pwm0_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 262: Assignment to pwm0_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 263: Assignment to pwm0_cyc ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 264: Assignment to pwm0_stb ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 233: Assignment to gpio0_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 242: Assignment to i2c0_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 258: Assignment to pwm0_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 259: Assignment to pwm0_adr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 260: Assignment to pwm0_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 261: Assignment to pwm0_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 262: Assignment to pwm0_cyc ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 263: Assignment to pwm0_stb ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu>.
 
@@ -191,12 +191,12 @@ Elaborating module <lm32_mc_arithmetic>.
 
 Elaborating module <lm32_interrupt>.
 WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/lm32/lm32_cpu.v" Line 1138: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 285: Assignment to lm32i_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 286: Assignment to lm32i_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 287: Assignment to lm32i_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 299: Assignment to lm32d_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 300: Assignment to lm32d_lock ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 301: Assignment to lm32d_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 284: Assignment to lm32i_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 285: Assignment to lm32i_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 286: Assignment to lm32i_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 298: Assignment to lm32d_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 299: Assignment to lm32d_lock ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 300: Assignment to lm32d_bte ignored, since the identifier is never used
 
 Elaborating module <wb_bram(adr_width=12,mem_file_name="../firmware/hw-test/image.ram")>.
 Reading initialization file \"../firmware/hw-test/image.ram\".
@@ -213,14 +213,14 @@ WARNING:HDLCompiler:413 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/
 Elaborating module <wb_spi>.
 WARNING:HDLCompiler:413 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/wb_spi/wb_spi.v" Line 57: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/wb_spi/wb_spi.v" Line 63: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Size mismatch in connection of port <wb_adr_i>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 401: Size mismatch in connection of port <wb_dat_i>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 402: Size mismatch in connection of port <wb_dat_o>. Formal port size is 32-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 402: Assignment to spi0_dat_r ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 406: Size mismatch in connection of port <wb_sel_i>. Formal port size is 4-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 407: Assignment to spi0_ack ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 408: Assignment to spi0_clk ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 409: Assignment to spi0_mosi ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 398: Size mismatch in connection of port <wb_adr_i>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 399: Size mismatch in connection of port <wb_dat_i>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Size mismatch in connection of port <wb_dat_o>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Assignment to spi0_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 404: Size mismatch in connection of port <wb_sel_i>. Formal port size is 4-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 405: Assignment to spi0_ack ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 406: Assignment to spi0_clk ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 407: Assignment to spi0_mosi ignored, since the identifier is never used
 
 Elaborating module <i2c_master_wb_top>.
 
@@ -231,33 +231,33 @@ Elaborating module <i2c_master_bit_ctrl>.
 WARNING:HDLCompiler:1308 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/wb_i2c/i2c_master_bit_ctrl.v" Line 376: Found full_case directive in module i2c_master_bit_ctrl. Use of full_case directives may cause differences between RTL and post-synthesis simulation
 
 Elaborating module <i2c_master_registers>.
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 423: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 424: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 425: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 421: Size mismatch in connection of port <wb_adr_i>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 422: Size mismatch in connection of port <wb_dat_i>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 423: Size mismatch in connection of port <wb_dat_o>. Formal port size is 8-bit while actual signal size is 32-bit.
 
 Elaborating module <wb_timer(clk_freq=100000000)>.
 
 Elaborating module <wb_gpio>.
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 480: Assignment to i2c_sda ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 481: Assignment to i2c_scl ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 77: Net <pwm0_dat_r[31]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 137: Net <pwm0_ack> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 143: Net <lm32i_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 144: Net <lm32d_rty> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 146: Net <lm32i_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 147: Net <lm32d_err> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 164: Net <gpio0_intr> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 393: Net <spi0_miso> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 400: Net <spi0_adr> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 401: Net <spi0_dat_w> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 403: Net <spi0_stb> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 404: Net <spi0_cyc> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 405: Net <spi0_we> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 406: Net <spi0_sel> does not have a driver.
-WARNING:HDLCompiler:552 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 181: Input port m0_cti_i[2] is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 419: Input port arst_i is not connected on this instance
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 478: Assignment to i2c_sda ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 479: Assignment to i2c_scl ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 76: Net <pwm0_dat_r[31]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 136: Net <pwm0_ack> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 142: Net <lm32i_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 143: Net <lm32d_rty> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 145: Net <lm32i_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 146: Net <lm32d_err> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 163: Net <gpio0_intr> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 391: Net <spi0_miso> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 398: Net <spi0_adr> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 399: Net <spi0_dat_w> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 401: Net <spi0_stb> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 402: Net <spi0_cyc> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 403: Net <spi0_we> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 404: Net <spi0_sel> does not have a driver.
+WARNING:HDLCompiler:552 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 180: Input port m0_cti_i[2] is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" Line 417: Input port arst_i is not connected on this instance
 WARNING:Xst:2972 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/rtl/lm32/lm32_cpu.v" line 483. All outputs of instance <simtrace> of block <lm32_simtrace> are unconnected in block <lm32_cpu>. Underlying logic will be removed.
-WARNING:Xst:2972 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 396. All outputs of instance <spi0> of block <wb_spi> are unconnected in block <system>. Underlying logic will be removed.
+WARNING:Xst:2972 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 394. All outputs of instance <spi0> of block <wb_spi> are unconnected in block <system>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -276,33 +276,33 @@ WARNING:Xst:647 - Input <sram_data> is never used. This port will be preserved a
 WARNING:Xst:647 - Input <nwe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <noe> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <ncs> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s4_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_dat_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_adr_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_we_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_cyc_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 181: Output port <s6_stb_o> of the instance <conbus0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 272: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 272: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 272: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 272: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 272: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 272: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 396: Output port <wb_dat_o> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 396: Output port <spi_cs> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 396: Output port <wb_ack_o> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 396: Output port <spi_sck> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 396: Output port <spi_mosi> of the instance <spi0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 419: Output port <wb_inta_o> of the instance <i2c0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s0_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s1_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s2_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s3_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s3_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s4_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s4_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s5_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_dat_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_adr_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_cti_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_sel_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_we_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_cyc_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 180: Output port <s6_stb_o> of the instance <conbus0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 271: Output port <I_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 271: Output port <I_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 271: Output port <D_CTI_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 271: Output port <D_BTE_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 271: Output port <I_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 271: Output port <D_LOCK_O> of the instance <lm0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 394: Output port <wb_dat_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 394: Output port <spi_cs> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 394: Output port <wb_ack_o> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 394: Output port <spi_sck> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 394: Output port <spi_mosi> of the instance <spi0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/system.v" line 417: Output port <wb_inta_o> of the instance <i2c0> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <pwm0_dat_r> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <pwm0_ack> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <lm32i_rty> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -1551,9 +1551,9 @@ Top Level Output File Name         : system.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2206
+# BELS                             : 2205
 #      GND                         : 1
-#      INV                         : 32
+#      INV                         : 31
 #      LUT1                        : 93
 #      LUT2                        : 206
 #      LUT3                        : 217
@@ -1580,9 +1580,9 @@ Primitive and Black Box Usage:
 #      RAMB36E1                    : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 7
+# IO Buffers                       : 6
 #      IBUF                        : 3
-#      OBUF                        : 4
+#      OBUF                        : 3
 # DSPs                             : 3
 #      DSP48E1                     : 3
 
@@ -1594,21 +1594,21 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1345  out of  126800     1%  
- Number of Slice LUTs:                 1810  out of  63400     2%  
-    Number used as Logic:              1682  out of  63400     2%  
+ Number of Slice LUTs:                 1809  out of  63400     2%  
+    Number used as Logic:              1681  out of  63400     2%  
     Number used as Memory:              128  out of  19000     0%  
        Number used as RAM:              128
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2051
-   Number with an unused Flip Flop:     706  out of   2051    34%  
-   Number with an unused LUT:           241  out of   2051    11%  
-   Number of fully used LUT-FF pairs:  1104  out of   2051    53%  
+ Number of LUT Flip Flop pairs used:   2050
+   Number with an unused Flip Flop:     705  out of   2050    34%  
+   Number with an unused LUT:           241  out of   2050    11%  
+   Number of fully used LUT-FF pairs:  1104  out of   2050    53%  
    Number of unique control sets:        54
 
 IO Utilization: 
- Number of IOs:                          34
- Number of bonded IOBs:                   8  out of    210     3%  
+ Number of IOs:                          33
+ Number of bonded IOBs:                   7  out of    210     3%  
     IOB Flip Flops/Latches:               4
 
 Specific Feature Utilization:
@@ -1705,7 +1705,7 @@ Offset:              1.708ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 4 / 4
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
 Offset:              1.037ns (Levels of Logic = 2)
   Source:            uart0/uart0/uart_txd (FF)
@@ -1717,7 +1717,7 @@ Offset:              1.037ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               2   0.361   0.283  uart0/uart0/uart_txd (uart0/uart0/uart_txd)
-     INV:I->O              1   0.113   0.279  led2_INV_0 (led_OBUF)
+     INV:I->O              1   0.113   0.279  led1_INV_0 (led_OBUF)
      OBUF:I->O                 0.000          led_OBUF (led)
     ----------------------------------------
     Total                      1.037ns (0.474ns logic, 0.563ns route)
@@ -1739,13 +1739,13 @@ clk            |    6.292|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 15.19 secs
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.51 secs
  
 --> 
 
 
-Total memory usage is 523320 kilobytes
+Total memory usage is 523296 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  325 (   0 filtered)

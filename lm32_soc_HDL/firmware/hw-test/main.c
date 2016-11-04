@@ -4,13 +4,14 @@
 
 #include "soc-hw.h"
 
-void main(){
+int  main(){
 	/*char a;
 	for(a=1; a<8; a++){
 		a=a+1;
-		uart_putchar(a);
-	}*/
-	/*isr_init();
+		uart_putchar1(a);
+		nsleep(101630);
+	}
+	isr_init();
 	tic_init();
 	irq_enable();
 	
@@ -18,18 +19,29 @@ void main(){
 	
 	
 	for(i=1; i<=10; i++) {
-		uart_putchar(i);    
-		i2c_write(ADDRESS_I2C,CH1,10);
+		uart_putchar1(i);    
+		//i2c_write(ADDRESS_I2C,CH1,10);
 		nsleep(101630);
-		
 	}*/
-
-	uart_putstr("AT+CIPMUX=0\r\n");
-	uart_putstr("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
-	uart_putstr("AT+CIPSEND=4\r\n");
-	uart_putstr("HO\r\n");
 	
+	uart_putstr1("AT+CIPMUX=0\r\n");
+        nsleep(3016300);
+	uart_putstr1("AT+CIPMODE=1\r\n");
+	nsleep(3016300);
+	uart_putstr1("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
+        nsleep(3016300);
+	uart_putstr1("AT+CIPSEND\r\n");
+        nsleep(3016300);
+	char i=0;
+	char a=0x30;
+	for(i; i<=10; i++) {
+	uart_putchar1(a);
+	uart_putstr1("\r\n");
+	nsleep(3016300);
+	a++;
+	}
 }
+
 
 /*inline void writeint(uint32_t val)
 {

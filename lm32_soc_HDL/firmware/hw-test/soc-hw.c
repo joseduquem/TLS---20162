@@ -167,6 +167,71 @@ void uart_putstr1(char *str)
 	}
 }
 
+/***************************************************************************
+ * WIFI ESP8266 Functions
+ */
+
+void init_wifi(){ //configurar el modulo como estación con puerto 80
+	//uart_putstr1("AT+RST\r\n");
+	nsleep(2016300);
+	//int c = 0;
+	//while(c==0){
+		uart_putstr1("AT+CIPMUX=0\r\n");
+		//c = ok();
+		nsleep(2016300);
+	//}
+	//c = 0;
+	//while (c==0){
+		uart_putstr1("AT+CIPMODE=1\r\n");
+		//c = ok();
+		nsleep(2016300);
+	//}
+	//c = 0;
+	//while (c==0){
+		uart_putstr1("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
+		//c = ok();
+		nsleep(2016300);
+		uart_putstr1("AT+CIPSEND\r\n");
+		nsleep(2016300);
+	//}
+}
+
+void wifi_putchar(char a){
+	//int c = 0; 	  
+	//while(c == 0){
+		uart_putchar1(a);
+		//c = ok();
+	//}
+}
+
+char wifi_getchar(){
+	char c='\n';
+	int i=0;
+	for(i=0;i<20;i++){
+		c = uart_getchar1();
+		if (c ==':'){
+			c = uart_getchar1();
+			return c;
+			break;
+		}
+	}
+	return '\n';
+
+}
+
+int ok(){
+	int i=0;
+	char a;
+	for(i=0;i<30;i++){
+		a=uart_getchar1();
+		if(a=='K'){
+			return 1;
+		}
+	}
+	return 0;
+
+}
+
 /******************************************************************************
  * i2c Functions
  */

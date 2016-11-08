@@ -103,6 +103,11 @@ void uart_putchar1(char c);
 void uart_putstr1(char *str);
 char uart_getchar1();
 
+void init_wifi();
+void wifi_putchar(char a);
+char wifi_getchar();
+int ok();
+
 /***************************************************************************
  * SPI0
  */

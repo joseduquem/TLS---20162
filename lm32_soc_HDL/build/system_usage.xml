@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <DeviceUsageSummary rev="2">
-<DesignStatistics TimeStamp="Thu Nov  3 12:48:56 2016"><group name="NetStatistics">
+<DesignStatistics TimeStamp="Tue Nov  8 11:58:31 2016"><group name="NetStatistics">
 <item name="NumNets_Active" rev="2">
 <attrib name="value" value="2545"/></item>
 <item name="NumNets_Gnd" rev="2">
@@ -194,7 +194,7 @@
 <attrib name="value" value="76"/></item>
 </group>
 </DesignStatistics>
-<DeviceUsage TimeStamp="Thu Nov  3 12:48:56 2016"><group name="SiteSummary">
+<DeviceUsage TimeStamp="Tue Nov  8 11:58:31 2016"><group name="SiteSummary">
 <item name="BUFG" rev="2">
 <attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
 <item name="BUFG_BUFG" rev="2">
@@ -251,7 +251,7 @@
 <attrib name="total" value="1000000"/><attrib name="used" value="17"/></item>
 </group>
 </DeviceUsage>
-<ReportConfigData TimeStamp="Thu Nov  3 12:48:56 2016"><group name="LUT_OR_MEM5">
+<ReportConfigData TimeStamp="Tue Nov  8 11:58:31 2016"><group name="LUT_OR_MEM5">
 <item name="CLK" rev="2">
 <attrib name="CLK" value="64"/><attrib name="CLK_INV" value="0"/></item>
 <item name="LUT_OR_MEM" rev="2">
@@ -584,7 +584,7 @@
 <attrib name="0" value="1"/></item>
 </group>
 </ReportConfigData>
-<ReportPinData TimeStamp="Thu Nov  3 12:48:56 2016"><group name="IOB33_OUTBUF">
+<ReportPinData TimeStamp="Tue Nov  8 11:58:31 2016"><group name="IOB33_OUTBUF">
 <item name="IN" rev="2">
 <attrib name="value" value="3"/></item>
 <item name="OUT" rev="2">

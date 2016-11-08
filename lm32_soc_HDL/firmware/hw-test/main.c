@@ -22,24 +22,19 @@ int  main(){
 		uart_putchar1(i);    
 		//i2c_write(ADDRESS_I2C,CH1,10);
 		nsleep(101630);
-	}*/
-	
-	uart_putstr1("AT+CIPMUX=0\r\n");
-        nsleep(3016300);
-	uart_putstr1("AT+CIPMODE=1\r\n");
-	nsleep(3016300);
-	uart_putstr1("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
-        nsleep(3016300);
-	uart_putstr1("AT+CIPSEND\r\n");
-        nsleep(3016300);
+	}
+	*/
+
+	init_wifi();
 	char i=0;
 	char a=0x30;
-	for(i; i<=10; i++) {
-	uart_putchar1(a);
-	uart_putstr1("\r\n");
-	nsleep(3016300);
-	a++;
+	for(i; i<=9; i++) {
+		wifi_putchar(a);
+		uart_putstr1("\r\n");
+		nsleep(2016300);
+		a++;
 	}
+	
 }
 
 

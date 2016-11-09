@@ -127,36 +127,28 @@ char spi_getchar();
 /***************************************************************************
  * I2C0
  */
-#define ADDRESS_I2C	0x68
-#define CH1 		0x40 
-#define CH2	        0x44
-#define CH3	        0x48
-#define CH4 		0x52
-
-typedef struct {  
-   volatile uint32_t i2c_data_out;
-   volatile uint32_t availWrite;
-   volatile uint32_t availRead;	
-   volatile uint32_t rw;
-   volatile uint32_t data;
-   volatile uint32_t startRead;
-   volatile uint32_t startWrite;
+#define txr 0x03
+typedef struct {
+   volatile uint8_t TXR;
+   volatile uint8_t CR;	
+   volatile uint32_t PRER;	
+	
 } i2c_t;
+//UART0
 
-void i2c_write (int dirI2C, int dirIntern, int data);
-int8_t i2c_read (int dirI2C, int dirIntern);
-void start_Read (int num);
-void start_Write (int num);
-void rw(int data_rw);
+void i2c_prueba();
+
 
 
 /***************************************************************************
  * Pointer to actual components
  */
 extern timer_t  *timer0;
+extern i2c_t    *i2c0;
 extern uart_t   *uart0; 
 extern uart_t   *uart1;
 extern gpio_t   *gpio0; 
 extern uint32_t *sram0; 
+
 
 #endif // SPIKEHW_H

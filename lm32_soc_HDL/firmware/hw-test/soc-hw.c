@@ -235,40 +235,8 @@ int ok(){
 /******************************************************************************
  * i2c Functions
  */
-void start_Read (int r)
-{  
-	i2c0->startRead = r;
+void i2c_prueba(){
+	i2c0->	CR 	= 0x02 & txr;
+	i2c0->	TXR 	= 0x5;
+	i2c0->	CR 	= 0x10;
 }
-
-void start_Write (int w)
-{  
-	i2c0->startWrite = w;
-}
-
-void rw(int data_rw)
-{
-	i2c0->rw = data_rw;
-}
-
-void i2c_write (int dirI2C, int dirIntern, int data)
-{		
-	start_Write(data);
-	msleep(1);
-	start_Write(0);
-	rw(0); 
-	while((i2c0->availWrite)==0x00);
-	i2c0->data = ((dirI2C<<16)|(dirIntern<<8)|data);	
-
-}
-
-int8_t i2c_read (int dirI2C, int dirIntern){  
-	start_Read(1);
-	msleep(1);
-	start_Read(0);
-	rw(1);
-	while((i2c0->availRead)==0x04);
-	i2c0->data = ((dirI2C<<15)|(dirIntern<<7)|dirI2C);
-	return i2c0->i2c_data_out;
-}
-
-

@@ -3,35 +3,35 @@ image:     formato del fichero elf32-lm32
 
 Secciones:
 Ind Nombre        Tamaño    VMA       LMA       Desp fich Alin
-  0 .text         0000079c  00000000  00000000  00000054  2**2
+  0 .text         0000062c  00000000  00000000  00000054  2**2
                   CONTENTS, ALLOC, LOAD, CODE
-  1 .rodata       00000060  0000079c  0000079c  000007f0  2**2
+  1 .rodata       00000060  0000062c  0000062c  00000680  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  2 .data         00000014  000007fc  000007fc  00000850  2**2
+  2 .data         00000014  0000068c  0000068c  000006e0  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  3 .bss          00000084  00000810  00000810  00000864  2**2
+  3 .bss          00000084  000006a0  000006a0  000006f4  2**2
                   ALLOC
-  4 .debug_abbrev 000002ee  00000000  00000000  00000864  2**0
+  4 .debug_abbrev 00000253  00000000  00000000  000006f4  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000900  00000000  00000000  00000b52  2**0
+  5 .debug_info   000006fd  00000000  00000000  00000947  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   0000061f  00000000  00000000  00001452  2**0
+  6 .debug_line   000004f3  00000000  00000000  00001044  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  000001d0  00000000  00000000  00001a74  2**2
+  7 .debug_frame  00000190  00000000  00000000  00001538  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    0000025c  00000000  00000000  00001c44  2**0
+  8 .debug_pubnames 000001c1  00000000  00000000  000016c8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_pubnames 000001f3  00000000  00000000  00001ea0  2**0
+  9 .debug_pubtypes 00000077  00000000  00000000  00001889  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_pubtypes 00000076  00000000  00000000  00002093  2**0
+ 10 .debug_aranges 00000040  00000000  00000000  00001900  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_aranges 00000040  00000000  00000000  00002109  2**0
+ 11 .debug_str    00000233  00000000  00000000  00001940  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_str    000002a3  00000000  00000000  00002149  2**0
-                  CONTENTS, READONLY, DEBUGGING
- 13 .comment      00000011  00000000  00000000  000023ec  2**0
+ 12 .comment      00000011  00000000  00000000  00001b73  2**0
                   CONTENTS, READONLY
- 14 .debug_ranges 00000060  00000000  00000000  000023fd  2**0
+ 13 .debug_loc    0000017f  00000000  00000000  00001b84  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_ranges 00000018  00000000  00000000  00001d03  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Desensamblado de la sección .text:
@@ -100,7 +100,7 @@ Desensamblado de la sección .text:
   c0:	5b 9d 00 00 	sw (sp+0),ra
   c4:	f8 00 00 2b 	calli 170 <_save_all>
   c8:	90 40 08 00 	rcsr r1,IP
-  cc:	f8 00 00 75 	calli 2a0 <irq_handler>
+  cc:	f8 00 00 61 	calli 250 <irq_handler>
   d0:	78 01 ff ff 	mvhi r1,0xffff
   d4:	38 21 ff ff 	ori r1,r1,0xffff
   d8:	d0 41 00 00 	wcsr IP,r1
@@ -120,11 +120,11 @@ Desensamblado de la sección .text:
  100:	78 1c 00 00 	mvhi sp,0x0
  104:	3b 9c 0f fc 	ori sp,sp,0xffc
  108:	78 1a 00 00 	mvhi gp,0x0
- 10c:	3b 5a 08 10 	ori gp,gp,0x810
+ 10c:	3b 5a 06 a0 	ori gp,gp,0x6a0
  110:	78 01 00 00 	mvhi r1,0x0
- 114:	38 21 08 10 	ori r1,r1,0x810
+ 114:	38 21 06 a0 	ori r1,r1,0x6a0
  118:	78 03 00 00 	mvhi r3,0x0
- 11c:	38 63 08 94 	ori r3,r3,0x894
+ 11c:	38 63 07 24 	ori r3,r3,0x724
 
 00000120 <.clearBSS>:
  120:	44 23 00 04 	be r1,r3,130 <.callMain>
@@ -215,995 +215,752 @@ Desensamblado de la sección .text:
 #include "soc-hw.h"
 
 int  main(){
- 208:	37 9c ff f0 	addi sp,sp,-16
- 20c:	5b 8b 00 10 	sw (sp+16),r11
- 210:	5b 8c 00 0c 	sw (sp+12),r12
- 214:	5b 8d 00 08 	sw (sp+8),r13
- 218:	5b 9d 00 04 	sw (sp+4),ra
- 21c:	78 0c 00 00 	mvhi r12,0x0
-		nsleep(3016300);
-		a++;
-	}
-	*/	
-
-	init_wifi();
- 220:	f8 00 00 bc 	calli 510 <init_wifi>
- 224:	34 0b 00 00 	mvi r11,0
- 228:	39 8c 07 c0 	ori r12,r12,0x7c0
-	char i=0;
-	char a=0x30;
-	for(i; i<=9; i++) {
- 22c:	34 0d 00 0a 	mvi r13,10
-		wifi_putchar(a);
- 230:	35 61 00 30 	addi r1,r11,48
- 234:	f8 00 00 d7 	calli 590 <wifi_putchar>
-		uart_putstr1("\r\n");
- 238:	b9 80 08 00 	mv r1,r12
- 23c:	f8 00 00 a8 	calli 4dc <uart_putstr1>
-		nsleep(2016300);
- 240:	78 02 00 00 	mvhi r2,0x0
- 244:	38 42 07 9c 	ori r2,r2,0x79c
- 248:	28 41 00 00 	lw r1,(r2+0)
- 24c:	35 6b 00 01 	addi r11,r11,1
- 250:	f8 00 00 53 	calli 39c <nsleep>
-	*/	
-
-	init_wifi();
-	char i=0;
-	char a=0x30;
-	for(i; i<=9; i++) {
- 254:	5d 6d ff f7 	bne r11,r13,230 <main+0x28>
-		uart_putstr1("\r\n");
-		nsleep(2016300);
-		a++;
-	}
+ 208:	37 9c ff fc 	addi sp,sp,-4
+ 20c:	5b 9d 00 04 	sw (sp+4),ra
+	}d 
 	
 }
- 258:	2b 9d 00 04 	lw ra,(sp+4)
- 25c:	2b 8b 00 10 	lw r11,(sp+16)
- 260:	2b 8c 00 0c 	lw r12,(sp+12)
- 264:	2b 8d 00 08 	lw r13,(sp+8)
- 268:	37 9c 00 10 	addi sp,sp,16
- 26c:	c3 a0 00 00 	ret
+*/
 
-00000270 <isr_null>:
+i2c_prueba();
+ 210:	f8 00 00 fd 	calli 604 <i2c_prueba>
+}
+ 214:	2b 9d 00 04 	lw ra,(sp+4)
+ 218:	37 9c 00 04 	addi sp,sp,4
+ 21c:	c3 a0 00 00 	ret
+
+00000220 <isr_null>:
 /***************************************************************************
  * IRQ handling
  */
 void isr_null()
 {
 }
- 270:	c3 a0 00 00 	ret
+ 220:	c3 a0 00 00 	ret
 
-00000274 <tic_isr>:
-
-uint32_t tic_msec;
-
-void tic_isr()
-{
-	tic_msec++;
- 274:	78 01 00 00 	mvhi r1,0x0
- 278:	38 21 08 90 	ori r1,r1,0x890
- 27c:	28 23 00 00 	lw r3,(r1+0)
-	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
- 280:	78 02 00 00 	mvhi r2,0x0
- 284:	38 42 08 00 	ori r2,r2,0x800
- 288:	28 42 00 00 	lw r2,(r2+0)
+00000224 <tic_isr>:
 
 uint32_t tic_msec;
 
 void tic_isr()
 {
 	tic_msec++;
- 28c:	34 63 00 01 	addi r3,r3,1
- 290:	58 23 00 00 	sw (r1+0),r3
+ 224:	78 01 00 00 	mvhi r1,0x0
+ 228:	38 21 07 20 	ori r1,r1,0x720
+ 22c:	28 23 00 00 	lw r3,(r1+0)
 	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
- 294:	34 01 00 0e 	mvi r1,14
- 298:	58 41 00 00 	sw (r2+0),r1
+ 230:	78 02 00 00 	mvhi r2,0x0
+ 234:	38 42 06 90 	ori r2,r2,0x690
+ 238:	28 42 00 00 	lw r2,(r2+0)
+
+uint32_t tic_msec;
+
+void tic_isr()
+{
+	tic_msec++;
+ 23c:	34 63 00 01 	addi r3,r3,1
+ 240:	58 23 00 00 	sw (r1+0),r3
+	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
+ 244:	34 01 00 0e 	mvi r1,14
+ 248:	58 41 00 00 	sw (r2+0),r1
 }
- 29c:	c3 a0 00 00 	ret
+ 24c:	c3 a0 00 00 	ret
 
-000002a0 <irq_handler>:
+00000250 <irq_handler>:
 void isr_null()
 {
 }
 
 void irq_handler(uint32_t pending)
 {
- 2a0:	37 9c ff f0 	addi sp,sp,-16
- 2a4:	5b 8b 00 10 	sw (sp+16),r11
- 2a8:	5b 8c 00 0c 	sw (sp+12),r12
- 2ac:	5b 8d 00 08 	sw (sp+8),r13
- 2b0:	5b 9d 00 04 	sw (sp+4),ra
- 2b4:	78 0b 00 00 	mvhi r11,0x0
- 2b8:	39 6b 08 10 	ori r11,r11,0x810
- 2bc:	b8 20 60 00 	mv r12,r1
+ 250:	37 9c ff f0 	addi sp,sp,-16
+ 254:	5b 8b 00 10 	sw (sp+16),r11
+ 258:	5b 8c 00 0c 	sw (sp+12),r12
+ 25c:	5b 8d 00 08 	sw (sp+8),r13
+ 260:	5b 9d 00 04 	sw (sp+4),ra
+ 264:	78 0b 00 00 	mvhi r11,0x0
+ 268:	39 6b 06 a0 	ori r11,r11,0x6a0
+ 26c:	b8 20 60 00 	mv r12,r1
  */
 void isr_null()
 {
 }
 
 void irq_handler(uint32_t pending)
- 2c0:	35 6d 00 80 	addi r13,r11,128
- 2c4:	e0 00 00 04 	bi 2d4 <irq_handler+0x34>
+ 270:	35 6d 00 80 	addi r13,r11,128
+ 274:	e0 00 00 04 	bi 284 <irq_handler+0x34>
 {
 	int i;
 
 	for(i=0; i<32; i++) {
 		if (pending & 0x01) (*isr_table[i])();
- 2c8:	35 6b 00 04 	addi r11,r11,4
+ 278:	35 6b 00 04 	addi r11,r11,4
 
 void irq_handler(uint32_t pending)
 {
 	int i;
 
 	for(i=0; i<32; i++) {
- 2cc:	45 6d 00 08 	be r11,r13,2ec <irq_handler+0x4c>
+ 27c:	45 6d 00 08 	be r11,r13,29c <irq_handler+0x4c>
 		if (pending & 0x01) (*isr_table[i])();
 		pending >>= 1;
- 2d0:	01 8c 00 01 	srui r12,r12,1
+ 280:	01 8c 00 01 	srui r12,r12,1
 void irq_handler(uint32_t pending)
 {
 	int i;
 
 	for(i=0; i<32; i++) {
 		if (pending & 0x01) (*isr_table[i])();
- 2d4:	21 81 00 01 	andi r1,r12,0x1
- 2d8:	44 20 ff fc 	be r1,r0,2c8 <irq_handler+0x28>
- 2dc:	29 61 00 00 	lw r1,(r11+0)
- 2e0:	35 6b 00 04 	addi r11,r11,4
- 2e4:	d8 20 00 00 	call r1
+ 284:	21 81 00 01 	andi r1,r12,0x1
+ 288:	44 20 ff fc 	be r1,r0,278 <irq_handler+0x28>
+ 28c:	29 61 00 00 	lw r1,(r11+0)
+ 290:	35 6b 00 04 	addi r11,r11,4
+ 294:	d8 20 00 00 	call r1
 
 void irq_handler(uint32_t pending)
 {
 	int i;
 
 	for(i=0; i<32; i++) {
- 2e8:	5d 6d ff fa 	bne r11,r13,2d0 <irq_handler+0x30>
-		if (pending & 0x01) (*isr_table[i])();
-		pending >>= 1;
-	}
-}
- 2ec:	2b 9d 00 04 	lw ra,(sp+4)
- 2f0:	2b 8b 00 10 	lw r11,(sp+16)
- 2f4:	2b 8c 00 0c 	lw r12,(sp+12)
- 2f8:	2b 8d 00 08 	lw r13,(sp+8)
- 2fc:	37 9c 00 10 	addi sp,sp,16
- 300:	c3 a0 00 00 	ret
-
-00000304 <isr_init>:
-
-void isr_init()
-{
- 304:	78 01 00 00 	mvhi r1,0x0
- 308:	78 02 00 00 	mvhi r2,0x0
- 30c:	38 21 08 10 	ori r1,r1,0x810
- 310:	38 42 02 70 	ori r2,r2,0x270
+ 298:	5d 6d ff fa 	bne r11,r13,280 <irq_handler+0x30>
 		if (pending & 0x01) (*isr_table[i])();
 		pending >>= 1;
 	}
 }
+ 29c:	2b 9d 00 04 	lw ra,(sp+4)
+ 2a0:	2b 8b 00 10 	lw r11,(sp+16)
+ 2a4:	2b 8c 00 0c 	lw r12,(sp+12)
+ 2a8:	2b 8d 00 08 	lw r13,(sp+8)
+ 2ac:	37 9c 00 10 	addi sp,sp,16
+ 2b0:	c3 a0 00 00 	ret
+
+000002b4 <isr_init>:
 
 void isr_init()
- 314:	34 23 00 80 	addi r3,r1,128
+{
+ 2b4:	78 01 00 00 	mvhi r1,0x0
+ 2b8:	78 02 00 00 	mvhi r2,0x0
+ 2bc:	38 21 06 a0 	ori r1,r1,0x6a0
+ 2c0:	38 42 02 20 	ori r2,r2,0x220
+		if (pending & 0x01) (*isr_table[i])();
+		pending >>= 1;
+	}
+}
+
+void isr_init()
+ 2c4:	34 23 00 80 	addi r3,r1,128
 {
 	int i;
 	for(i=0; i<32; i++)
 		isr_table[i] = &isr_null;
- 318:	58 22 00 00 	sw (r1+0),r2
- 31c:	34 21 00 04 	addi r1,r1,4
+ 2c8:	58 22 00 00 	sw (r1+0),r2
+ 2cc:	34 21 00 04 	addi r1,r1,4
 }
 
 void isr_init()
 {
 	int i;
 	for(i=0; i<32; i++)
- 320:	5c 23 ff fe 	bne r1,r3,318 <isr_init+0x14>
+ 2d0:	5c 23 ff fe 	bne r1,r3,2c8 <isr_init+0x14>
 		isr_table[i] = &isr_null;
 }
- 324:	c3 a0 00 00 	ret
+ 2d4:	c3 a0 00 00 	ret
 
-00000328 <isr_register>:
+000002d8 <isr_register>:
 
 void isr_register(int irq, isr_ptr_t isr)
 {
 	isr_table[irq] = isr;
- 328:	78 03 00 00 	mvhi r3,0x0
- 32c:	3c 21 00 02 	sli r1,r1,2
- 330:	38 63 08 10 	ori r3,r3,0x810
- 334:	b4 61 18 00 	add r3,r3,r1
- 338:	58 62 00 00 	sw (r3+0),r2
+ 2d8:	78 03 00 00 	mvhi r3,0x0
+ 2dc:	3c 21 00 02 	sli r1,r1,2
+ 2e0:	38 63 06 a0 	ori r3,r3,0x6a0
+ 2e4:	b4 61 18 00 	add r3,r3,r1
+ 2e8:	58 62 00 00 	sw (r3+0),r2
 }
- 33c:	c3 a0 00 00 	ret
+ 2ec:	c3 a0 00 00 	ret
 
-00000340 <isr_unregister>:
+000002f0 <isr_unregister>:
 
 void isr_unregister(int irq)
 {
 	isr_table[irq] = &isr_null;
- 340:	78 03 00 00 	mvhi r3,0x0
- 344:	3c 21 00 02 	sli r1,r1,2
- 348:	38 63 08 10 	ori r3,r3,0x810
- 34c:	78 02 00 00 	mvhi r2,0x0
- 350:	b4 61 18 00 	add r3,r3,r1
- 354:	38 42 02 70 	ori r2,r2,0x270
- 358:	58 62 00 00 	sw (r3+0),r2
+ 2f0:	78 03 00 00 	mvhi r3,0x0
+ 2f4:	3c 21 00 02 	sli r1,r1,2
+ 2f8:	38 63 06 a0 	ori r3,r3,0x6a0
+ 2fc:	78 02 00 00 	mvhi r2,0x0
+ 300:	b4 61 18 00 	add r3,r3,r1
+ 304:	38 42 02 20 	ori r2,r2,0x220
+ 308:	58 62 00 00 	sw (r3+0),r2
 }
- 35c:	c3 a0 00 00 	ret
+ 30c:	c3 a0 00 00 	ret
 
-00000360 <msleep>:
+00000310 <msleep>:
 void msleep(uint32_t msec)
 {
 	uint32_t tcr;
 
 	// Use timer0.1
 	timer0->compare1 = (FCPU/1000)*msec;
- 360:	78 04 00 00 	mvhi r4,0x0
- 364:	38 84 07 a0 	ori r4,r4,0x7a0
- 368:	28 83 00 00 	lw r3,(r4+0)
- 36c:	78 02 00 00 	mvhi r2,0x0
- 370:	38 42 08 00 	ori r2,r2,0x800
- 374:	28 42 00 00 	lw r2,(r2+0)
- 378:	88 23 08 00 	mul r1,r1,r3
- 37c:	58 41 00 10 	sw (r2+16),r1
+ 310:	78 04 00 00 	mvhi r4,0x0
+ 314:	38 84 06 2c 	ori r4,r4,0x62c
+ 318:	28 83 00 00 	lw r3,(r4+0)
+ 31c:	78 02 00 00 	mvhi r2,0x0
+ 320:	38 42 06 90 	ori r2,r2,0x690
+ 324:	28 42 00 00 	lw r2,(r2+0)
+ 328:	88 23 08 00 	mul r1,r1,r3
+ 32c:	58 41 00 10 	sw (r2+16),r1
 	timer0->counter1 = 0;
- 380:	58 40 00 14 	sw (r2+20),r0
+ 330:	58 40 00 14 	sw (r2+20),r0
 	timer0->tcr1 = TIMER_EN;
- 384:	34 01 00 08 	mvi r1,8
- 388:	58 41 00 0c 	sw (r2+12),r1
+ 334:	34 01 00 08 	mvi r1,8
+ 338:	58 41 00 0c 	sw (r2+12),r1
 
 	do {
 		//halt();
  		tcr = timer0->tcr1;
- 38c:	28 41 00 0c 	lw r1,(r2+12)
+ 33c:	28 41 00 0c 	lw r1,(r2+12)
  	} while ( ! (tcr & TIMER_TRIG) );
- 390:	20 21 00 01 	andi r1,r1,0x1
- 394:	44 20 ff fe 	be r1,r0,38c <msleep+0x2c>
+ 340:	20 21 00 01 	andi r1,r1,0x1
+ 344:	44 20 ff fe 	be r1,r0,33c <msleep+0x2c>
 }
- 398:	c3 a0 00 00 	ret
+ 348:	c3 a0 00 00 	ret
 
-0000039c <nsleep>:
+0000034c <nsleep>:
 void nsleep(uint32_t nsec)
 {
 	uint32_t tcr;
 
 	// Use timer0.1
 	timer0->compare1 = (FCPU/1000000)*nsec;
- 39c:	78 02 00 00 	mvhi r2,0x0
- 3a0:	38 42 08 00 	ori r2,r2,0x800
- 3a4:	28 42 00 00 	lw r2,(r2+0)
- 3a8:	08 21 00 64 	muli r1,r1,100
- 3ac:	58 41 00 10 	sw (r2+16),r1
+ 34c:	78 02 00 00 	mvhi r2,0x0
+ 350:	38 42 06 90 	ori r2,r2,0x690
+ 354:	28 42 00 00 	lw r2,(r2+0)
+ 358:	08 21 00 64 	muli r1,r1,100
+ 35c:	58 41 00 10 	sw (r2+16),r1
 	timer0->counter1 = 0;
- 3b0:	58 40 00 14 	sw (r2+20),r0
+ 360:	58 40 00 14 	sw (r2+20),r0
 	timer0->tcr1 = TIMER_EN;
- 3b4:	34 01 00 08 	mvi r1,8
- 3b8:	58 41 00 0c 	sw (r2+12),r1
+ 364:	34 01 00 08 	mvi r1,8
+ 368:	58 41 00 0c 	sw (r2+12),r1
 
 	do {
 		//halt();
  		tcr = timer0->tcr1;
- 3bc:	28 41 00 0c 	lw r1,(r2+12)
+ 36c:	28 41 00 0c 	lw r1,(r2+12)
  	} while ( ! (tcr & TIMER_TRIG) );
- 3c0:	20 21 00 01 	andi r1,r1,0x1
- 3c4:	44 20 ff fe 	be r1,r0,3bc <nsleep+0x20>
+ 370:	20 21 00 01 	andi r1,r1,0x1
+ 374:	44 20 ff fe 	be r1,r0,36c <nsleep+0x20>
 }
- 3c8:	c3 a0 00 00 	ret
+ 378:	c3 a0 00 00 	ret
 
-000003cc <tic_init>:
+0000037c <tic_init>:
 void tic_init()
 {
 	tic_msec = 0;
 
 	// Setup timer0.0
 	timer0->compare0 = (FCPU/10000);
- 3cc:	78 01 00 00 	mvhi r1,0x0
- 3d0:	38 21 08 00 	ori r1,r1,0x800
- 3d4:	28 23 00 00 	lw r3,(r1+0)
- 3d8:	34 02 27 10 	mvi r2,10000
+ 37c:	78 01 00 00 	mvhi r1,0x0
+ 380:	38 21 06 90 	ori r1,r1,0x690
+ 384:	28 23 00 00 	lw r3,(r1+0)
+ 388:	34 02 27 10 	mvi r2,10000
 	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
 }
 
 void tic_init()
 {
 	tic_msec = 0;
- 3dc:	78 01 00 00 	mvhi r1,0x0
+ 38c:	78 01 00 00 	mvhi r1,0x0
 
 	// Setup timer0.0
 	timer0->compare0 = (FCPU/10000);
- 3e0:	58 62 00 04 	sw (r3+4),r2
+ 390:	58 62 00 04 	sw (r3+4),r2
 	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
 }
 
 void tic_init()
 {
 	tic_msec = 0;
- 3e4:	38 21 08 90 	ori r1,r1,0x890
+ 394:	38 21 07 20 	ori r1,r1,0x720
 
 	// Setup timer0.0
 	timer0->compare0 = (FCPU/10000);
 	timer0->counter0 = 0;
- 3e8:	58 60 00 08 	sw (r3+8),r0
+ 398:	58 60 00 08 	sw (r3+8),r0
 	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
 }
 
 void tic_init()
 {
 	tic_msec = 0;
- 3ec:	58 20 00 00 	sw (r1+0),r0
+ 39c:	58 20 00 00 	sw (r1+0),r0
 		isr_table[i] = &isr_null;
 }
 
 void isr_register(int irq, isr_ptr_t isr)
 {
 	isr_table[irq] = isr;
- 3f0:	78 02 00 00 	mvhi r2,0x0
- 3f4:	78 01 00 00 	mvhi r1,0x0
+ 3a0:	78 02 00 00 	mvhi r2,0x0
+ 3a4:	78 01 00 00 	mvhi r1,0x0
 	tic_msec = 0;
 
 	// Setup timer0.0
 	timer0->compare0 = (FCPU/10000);
 	timer0->counter0 = 0;
 	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
- 3f8:	34 04 00 0e 	mvi r4,14
- 3fc:	58 64 00 00 	sw (r3+0),r4
+ 3a8:	34 04 00 0e 	mvi r4,14
+ 3ac:	58 64 00 00 	sw (r3+0),r4
 		isr_table[i] = &isr_null;
 }
 
 void isr_register(int irq, isr_ptr_t isr)
 {
 	isr_table[irq] = isr;
- 400:	38 21 08 10 	ori r1,r1,0x810
- 404:	38 42 02 74 	ori r2,r2,0x274
- 408:	58 22 00 04 	sw (r1+4),r2
+ 3b0:	38 21 06 a0 	ori r1,r1,0x6a0
+ 3b4:	38 42 02 24 	ori r2,r2,0x224
+ 3b8:	58 22 00 04 	sw (r1+4),r2
 	timer0->compare0 = (FCPU/10000);
 	timer0->counter0 = 0;
 	timer0->tcr0     = TIMER_EN | TIMER_AR | TIMER_IRQEN;
 
 	isr_register(1, &tic_isr);
 }
- 40c:	c3 a0 00 00 	ret
+ 3bc:	c3 a0 00 00 	ret
 
-00000410 <uart_init>:
+000003c0 <uart_init>:
 	//uart0->lcr = 0x03;  // Line Control Register:    8N1
 	//uart0->mcr = 0x00;  // Modem Control Register
 
 	// Setup Divisor register (Fclk / Baud)
 	//uart0->div = (FCPU/(57600*16));
 }
- 410:	c3 a0 00 00 	ret
+ 3c0:	c3 a0 00 00 	ret
 
-00000414 <uart_getchar>:
+000003c4 <uart_getchar>:
 
 char uart_getchar()
 {   
- 414:	78 01 00 00 	mvhi r1,0x0
- 418:	38 21 07 fc 	ori r1,r1,0x7fc
- 41c:	28 22 00 00 	lw r2,(r1+0)
+ 3c4:	78 01 00 00 	mvhi r1,0x0
+ 3c8:	38 21 06 8c 	ori r1,r1,0x68c
+ 3cc:	28 22 00 00 	lw r2,(r1+0)
 	while (! (uart0->ucr & UART_DR)) ;
- 420:	28 41 00 00 	lw r1,(r2+0)
- 424:	20 21 00 01 	andi r1,r1,0x1
- 428:	44 20 ff fe 	be r1,r0,420 <uart_getchar+0xc>
+ 3d0:	28 41 00 00 	lw r1,(r2+0)
+ 3d4:	20 21 00 01 	andi r1,r1,0x1
+ 3d8:	44 20 ff fe 	be r1,r0,3d0 <uart_getchar+0xc>
 	return uart0->rxtx;
- 42c:	28 41 00 04 	lw r1,(r2+4)
+ 3dc:	28 41 00 04 	lw r1,(r2+4)
 }
- 430:	20 21 00 ff 	andi r1,r1,0xff
- 434:	c3 a0 00 00 	ret
+ 3e0:	20 21 00 ff 	andi r1,r1,0xff
+ 3e4:	c3 a0 00 00 	ret
 
-00000438 <uart_putchar>:
+000003e8 <uart_putchar>:
 
 void uart_putchar(char c)
 {
- 438:	78 02 00 00 	mvhi r2,0x0
- 43c:	38 42 07 fc 	ori r2,r2,0x7fc
- 440:	28 43 00 00 	lw r3,(r2+0)
- 444:	20 21 00 ff 	andi r1,r1,0xff
+ 3e8:	78 02 00 00 	mvhi r2,0x0
+ 3ec:	38 42 06 8c 	ori r2,r2,0x68c
+ 3f0:	28 43 00 00 	lw r3,(r2+0)
+ 3f4:	20 21 00 ff 	andi r1,r1,0xff
 	while (uart0->ucr & UART_BUSY) ;
- 448:	28 62 00 00 	lw r2,(r3+0)
- 44c:	20 42 00 10 	andi r2,r2,0x10
- 450:	5c 40 ff fe 	bne r2,r0,448 <uart_putchar+0x10>
+ 3f8:	28 62 00 00 	lw r2,(r3+0)
+ 3fc:	20 42 00 10 	andi r2,r2,0x10
+ 400:	5c 40 ff fe 	bne r2,r0,3f8 <uart_putchar+0x10>
 	uart0->rxtx = c;
- 454:	58 61 00 04 	sw (r3+4),r1
+ 404:	58 61 00 04 	sw (r3+4),r1
 }
- 458:	c3 a0 00 00 	ret
+ 408:	c3 a0 00 00 	ret
 
-0000045c <uart_putstr>:
+0000040c <uart_putstr>:
 
 void uart_putstr(char *str)
 {
 	char *c = str;
 	while(*c) {
- 45c:	40 24 00 00 	lbu r4,(r1+0)
- 460:	44 80 00 0b 	be r4,r0,48c <uart_putstr+0x30>
- 464:	78 02 00 00 	mvhi r2,0x0
- 468:	38 42 07 fc 	ori r2,r2,0x7fc
- 46c:	28 43 00 00 	lw r3,(r2+0)
+ 40c:	40 24 00 00 	lbu r4,(r1+0)
+ 410:	44 80 00 0b 	be r4,r0,43c <uart_putstr+0x30>
+ 414:	78 02 00 00 	mvhi r2,0x0
+ 418:	38 42 06 8c 	ori r2,r2,0x68c
+ 41c:	28 43 00 00 	lw r3,(r2+0)
 	return uart0->rxtx;
 }
 
 void uart_putchar(char c)
 {
 	while (uart0->ucr & UART_BUSY) ;
- 470:	28 62 00 00 	lw r2,(r3+0)
- 474:	20 42 00 10 	andi r2,r2,0x10
- 478:	5c 40 ff fe 	bne r2,r0,470 <uart_putstr+0x14>
+ 420:	28 62 00 00 	lw r2,(r3+0)
+ 424:	20 42 00 10 	andi r2,r2,0x10
+ 428:	5c 40 ff fe 	bne r2,r0,420 <uart_putstr+0x14>
 	uart0->rxtx = c;
- 47c:	58 64 00 04 	sw (r3+4),r4
+ 42c:	58 64 00 04 	sw (r3+4),r4
 void uart_putstr(char *str)
 {
 	char *c = str;
 	while(*c) {
 		uart_putchar(*c);
 		c++;
- 480:	34 21 00 01 	addi r1,r1,1
+ 430:	34 21 00 01 	addi r1,r1,1
 }
 
 void uart_putstr(char *str)
 {
 	char *c = str;
 	while(*c) {
- 484:	40 24 00 00 	lbu r4,(r1+0)
- 488:	5c 82 ff fa 	bne r4,r2,470 <uart_putstr+0x14>
- 48c:	c3 a0 00 00 	ret
+ 434:	40 24 00 00 	lbu r4,(r1+0)
+ 438:	5c 82 ff fa 	bne r4,r2,420 <uart_putstr+0x14>
+ 43c:	c3 a0 00 00 	ret
 
-00000490 <uart_init1>:
+00000440 <uart_init1>:
 	//uart1->lcr = 0x03;  // Line Control Register:    8N1
 	//uart1->mcr = 0x00;  // Modem Control Register
 
 	// Setup Divisor register (Fclk / Baud)
 	//uart1->div = (FCPU/(57600*16));
 }
- 490:	c3 a0 00 00 	ret
+ 440:	c3 a0 00 00 	ret
 
-00000494 <uart_getchar1>:
+00000444 <uart_getchar1>:
 
 char uart_getchar1()
 {   
- 494:	78 01 00 00 	mvhi r1,0x0
- 498:	38 21 08 0c 	ori r1,r1,0x80c
- 49c:	28 22 00 00 	lw r2,(r1+0)
+ 444:	78 01 00 00 	mvhi r1,0x0
+ 448:	38 21 06 9c 	ori r1,r1,0x69c
+ 44c:	28 22 00 00 	lw r2,(r1+0)
 	while (! (uart1->ucr & UART_DR)) ;
- 4a0:	28 41 00 00 	lw r1,(r2+0)
- 4a4:	20 21 00 01 	andi r1,r1,0x1
- 4a8:	44 20 ff fe 	be r1,r0,4a0 <uart_getchar1+0xc>
+ 450:	28 41 00 00 	lw r1,(r2+0)
+ 454:	20 21 00 01 	andi r1,r1,0x1
+ 458:	44 20 ff fe 	be r1,r0,450 <uart_getchar1+0xc>
 	return uart1->rxtx;
- 4ac:	28 41 00 04 	lw r1,(r2+4)
+ 45c:	28 41 00 04 	lw r1,(r2+4)
 }
- 4b0:	20 21 00 ff 	andi r1,r1,0xff
- 4b4:	c3 a0 00 00 	ret
+ 460:	20 21 00 ff 	andi r1,r1,0xff
+ 464:	c3 a0 00 00 	ret
 
-000004b8 <uart_putchar1>:
+00000468 <uart_putchar1>:
 
 void uart_putchar1(char c)
 {
- 4b8:	78 02 00 00 	mvhi r2,0x0
- 4bc:	38 42 08 0c 	ori r2,r2,0x80c
- 4c0:	28 43 00 00 	lw r3,(r2+0)
- 4c4:	20 21 00 ff 	andi r1,r1,0xff
+ 468:	78 02 00 00 	mvhi r2,0x0
+ 46c:	38 42 06 9c 	ori r2,r2,0x69c
+ 470:	28 43 00 00 	lw r3,(r2+0)
+ 474:	20 21 00 ff 	andi r1,r1,0xff
 	while (uart1->ucr & UART_BUSY) ;
- 4c8:	28 62 00 00 	lw r2,(r3+0)
- 4cc:	20 42 00 10 	andi r2,r2,0x10
- 4d0:	5c 40 ff fe 	bne r2,r0,4c8 <uart_putchar1+0x10>
+ 478:	28 62 00 00 	lw r2,(r3+0)
+ 47c:	20 42 00 10 	andi r2,r2,0x10
+ 480:	5c 40 ff fe 	bne r2,r0,478 <uart_putchar1+0x10>
 	uart1->rxtx = c;
- 4d4:	58 61 00 04 	sw (r3+4),r1
+ 484:	58 61 00 04 	sw (r3+4),r1
 }
- 4d8:	c3 a0 00 00 	ret
+ 488:	c3 a0 00 00 	ret
 
-000004dc <uart_putstr1>:
+0000048c <uart_putstr1>:
 
 void uart_putstr1(char *str)
 {
 	char *c = str;
 	while(*c) {
- 4dc:	40 24 00 00 	lbu r4,(r1+0)
- 4e0:	44 80 00 0b 	be r4,r0,50c <uart_putstr1+0x30>
- 4e4:	78 02 00 00 	mvhi r2,0x0
- 4e8:	38 42 08 0c 	ori r2,r2,0x80c
- 4ec:	28 43 00 00 	lw r3,(r2+0)
+ 48c:	40 24 00 00 	lbu r4,(r1+0)
+ 490:	44 80 00 0b 	be r4,r0,4bc <uart_putstr1+0x30>
+ 494:	78 02 00 00 	mvhi r2,0x0
+ 498:	38 42 06 9c 	ori r2,r2,0x69c
+ 49c:	28 43 00 00 	lw r3,(r2+0)
 	return uart1->rxtx;
 }
 
 void uart_putchar1(char c)
 {
 	while (uart1->ucr & UART_BUSY) ;
- 4f0:	28 62 00 00 	lw r2,(r3+0)
- 4f4:	20 42 00 10 	andi r2,r2,0x10
- 4f8:	5c 40 ff fe 	bne r2,r0,4f0 <uart_putstr1+0x14>
+ 4a0:	28 62 00 00 	lw r2,(r3+0)
+ 4a4:	20 42 00 10 	andi r2,r2,0x10
+ 4a8:	5c 40 ff fe 	bne r2,r0,4a0 <uart_putstr1+0x14>
 	uart1->rxtx = c;
- 4fc:	58 64 00 04 	sw (r3+4),r4
+ 4ac:	58 64 00 04 	sw (r3+4),r4
 void uart_putstr1(char *str)
 {
 	char *c = str;
 	while(*c) {
 		uart_putchar1(*c);
 		c++;
- 500:	34 21 00 01 	addi r1,r1,1
+ 4b0:	34 21 00 01 	addi r1,r1,1
 }
 
 void uart_putstr1(char *str)
 {
 	char *c = str;
 	while(*c) {
- 504:	40 24 00 00 	lbu r4,(r1+0)
- 508:	5c 82 ff fa 	bne r4,r2,4f0 <uart_putstr1+0x14>
- 50c:	c3 a0 00 00 	ret
+ 4b4:	40 24 00 00 	lbu r4,(r1+0)
+ 4b8:	5c 82 ff fa 	bne r4,r2,4a0 <uart_putstr1+0x14>
+ 4bc:	c3 a0 00 00 	ret
 
-00000510 <init_wifi>:
+000004c0 <init_wifi>:
 
 /***************************************************************************
  * WIFI ESP8266 Functions
  */
 
 void init_wifi(){ //configurar el modulo como estación con puerto 80
- 510:	37 9c ff f8 	addi sp,sp,-8
- 514:	5b 8b 00 08 	sw (sp+8),r11
- 518:	5b 9d 00 04 	sw (sp+4),ra
+ 4c0:	37 9c ff f8 	addi sp,sp,-8
+ 4c4:	5b 8b 00 08 	sw (sp+8),r11
+ 4c8:	5b 9d 00 04 	sw (sp+4),ra
 	//uart_putstr1("AT+RST\r\n");
 	nsleep(2016300);
- 51c:	78 01 00 00 	mvhi r1,0x0
- 520:	38 21 07 9c 	ori r1,r1,0x79c
- 524:	28 2b 00 00 	lw r11,(r1+0)
- 528:	b9 60 08 00 	mv r1,r11
- 52c:	fb ff ff 9c 	calli 39c <nsleep>
+ 4cc:	78 01 00 00 	mvhi r1,0x0
+ 4d0:	38 21 06 30 	ori r1,r1,0x630
+ 4d4:	28 2b 00 00 	lw r11,(r1+0)
+ 4d8:	b9 60 08 00 	mv r1,r11
+ 4dc:	fb ff ff 9c 	calli 34c <nsleep>
 	//int c = 0;
 	//while(c==0){
 		uart_putstr1("AT+CIPMUX=0\r\n");
- 530:	78 01 00 00 	mvhi r1,0x0
- 534:	38 21 07 a4 	ori r1,r1,0x7a4
- 538:	fb ff ff e9 	calli 4dc <uart_putstr1>
+ 4e0:	78 01 00 00 	mvhi r1,0x0
+ 4e4:	38 21 06 34 	ori r1,r1,0x634
+ 4e8:	fb ff ff e9 	calli 48c <uart_putstr1>
 		//c = ok();
 		nsleep(2016300);
- 53c:	b9 60 08 00 	mv r1,r11
- 540:	fb ff ff 97 	calli 39c <nsleep>
+ 4ec:	b9 60 08 00 	mv r1,r11
+ 4f0:	fb ff ff 97 	calli 34c <nsleep>
 	//}
 	//c = 0;
 	//while (c==0){
 		uart_putstr1("AT+CIPMODE=1\r\n");
- 544:	78 01 00 00 	mvhi r1,0x0
- 548:	38 21 07 b4 	ori r1,r1,0x7b4
- 54c:	fb ff ff e4 	calli 4dc <uart_putstr1>
+ 4f4:	78 01 00 00 	mvhi r1,0x0
+ 4f8:	38 21 06 44 	ori r1,r1,0x644
+ 4fc:	fb ff ff e4 	calli 48c <uart_putstr1>
 		//c = ok();
 		nsleep(2016300);
- 550:	b9 60 08 00 	mv r1,r11
- 554:	fb ff ff 92 	calli 39c <nsleep>
+ 500:	b9 60 08 00 	mv r1,r11
+ 504:	fb ff ff 92 	calli 34c <nsleep>
 	//}
 	//c = 0;
 	//while (c==0){
 		uart_putstr1("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
- 558:	78 01 00 00 	mvhi r1,0x0
- 55c:	38 21 07 c4 	ori r1,r1,0x7c4
- 560:	fb ff ff df 	calli 4dc <uart_putstr1>
+ 508:	78 01 00 00 	mvhi r1,0x0
+ 50c:	38 21 06 54 	ori r1,r1,0x654
+ 510:	fb ff ff df 	calli 48c <uart_putstr1>
 		//c = ok();
 		nsleep(2016300);
- 564:	b9 60 08 00 	mv r1,r11
- 568:	fb ff ff 8d 	calli 39c <nsleep>
+ 514:	b9 60 08 00 	mv r1,r11
+ 518:	fb ff ff 8d 	calli 34c <nsleep>
 		uart_putstr1("AT+CIPSEND\r\n");
- 56c:	78 01 00 00 	mvhi r1,0x0
- 570:	38 21 07 ec 	ori r1,r1,0x7ec
- 574:	fb ff ff da 	calli 4dc <uart_putstr1>
+ 51c:	78 01 00 00 	mvhi r1,0x0
+ 520:	38 21 06 7c 	ori r1,r1,0x67c
+ 524:	fb ff ff da 	calli 48c <uart_putstr1>
 		nsleep(2016300);
- 578:	b9 60 08 00 	mv r1,r11
- 57c:	fb ff ff 88 	calli 39c <nsleep>
+ 528:	b9 60 08 00 	mv r1,r11
+ 52c:	fb ff ff 88 	calli 34c <nsleep>
 	//}
 }
- 580:	2b 9d 00 04 	lw ra,(sp+4)
- 584:	2b 8b 00 08 	lw r11,(sp+8)
- 588:	37 9c 00 08 	addi sp,sp,8
- 58c:	c3 a0 00 00 	ret
+ 530:	2b 9d 00 04 	lw ra,(sp+4)
+ 534:	2b 8b 00 08 	lw r11,(sp+8)
+ 538:	37 9c 00 08 	addi sp,sp,8
+ 53c:	c3 a0 00 00 	ret
 
-00000590 <wifi_putchar>:
+00000540 <wifi_putchar>:
 
 void wifi_putchar(char a){
- 590:	78 02 00 00 	mvhi r2,0x0
- 594:	38 42 08 0c 	ori r2,r2,0x80c
- 598:	28 43 00 00 	lw r3,(r2+0)
- 59c:	20 21 00 ff 	andi r1,r1,0xff
+ 540:	78 02 00 00 	mvhi r2,0x0
+ 544:	38 42 06 9c 	ori r2,r2,0x69c
+ 548:	28 43 00 00 	lw r3,(r2+0)
+ 54c:	20 21 00 ff 	andi r1,r1,0xff
 	return uart1->rxtx;
 }
 
 void uart_putchar1(char c)
 {
 	while (uart1->ucr & UART_BUSY) ;
- 5a0:	28 62 00 00 	lw r2,(r3+0)
- 5a4:	20 42 00 10 	andi r2,r2,0x10
- 5a8:	5c 40 ff fe 	bne r2,r0,5a0 <wifi_putchar+0x10>
+ 550:	28 62 00 00 	lw r2,(r3+0)
+ 554:	20 42 00 10 	andi r2,r2,0x10
+ 558:	5c 40 ff fe 	bne r2,r0,550 <wifi_putchar+0x10>
 	uart1->rxtx = c;
- 5ac:	58 61 00 04 	sw (r3+4),r1
+ 55c:	58 61 00 04 	sw (r3+4),r1
 	//int c = 0; 	  
 	//while(c == 0){
 		uart_putchar1(a);
 		//c = ok();
 	//}
 }
- 5b0:	c3 a0 00 00 	ret
+ 560:	c3 a0 00 00 	ret
 
-000005b4 <wifi_getchar>:
+00000564 <wifi_getchar>:
 			c = uart_getchar1();
 			return c;
 			break;
 		}
 	}
 	return '\n';
- 5b4:	78 01 00 00 	mvhi r1,0x0
- 5b8:	38 21 08 0c 	ori r1,r1,0x80c
- 5bc:	28 22 00 00 	lw r2,(r1+0)
+ 564:	78 01 00 00 	mvhi r1,0x0
+ 568:	38 21 06 9c 	ori r1,r1,0x69c
+ 56c:	28 22 00 00 	lw r2,(r1+0)
 }
 
 char wifi_getchar(){
 	char c='\n';
 	int i=0;
 	for(i=0;i<20;i++){
- 5c0:	34 03 00 00 	mvi r3,0
+ 570:	34 03 00 00 	mvi r3,0
 		c = uart_getchar1();
 		if (c ==':'){
- 5c4:	34 04 00 3a 	mvi r4,58
+ 574:	34 04 00 3a 	mvi r4,58
 }
 
 char wifi_getchar(){
 	char c='\n';
 	int i=0;
 	for(i=0;i<20;i++){
- 5c8:	34 05 00 14 	mvi r5,20
+ 578:	34 05 00 14 	mvi r5,20
 	//uart1->div = (FCPU/(57600*16));
 }
 
 char uart_getchar1()
 {   
 	while (! (uart1->ucr & UART_DR)) ;
- 5cc:	28 41 00 00 	lw r1,(r2+0)
- 5d0:	20 21 00 01 	andi r1,r1,0x1
- 5d4:	44 20 ff fe 	be r1,r0,5cc <wifi_getchar+0x18>
+ 57c:	28 41 00 00 	lw r1,(r2+0)
+ 580:	20 21 00 01 	andi r1,r1,0x1
+ 584:	44 20 ff fe 	be r1,r0,57c <wifi_getchar+0x18>
 	return uart1->rxtx;
- 5d8:	28 41 00 04 	lw r1,(r2+4)
+ 588:	28 41 00 04 	lw r1,(r2+4)
 }
 
 char wifi_getchar(){
 	char c='\n';
 	int i=0;
 	for(i=0;i<20;i++){
- 5dc:	34 63 00 01 	addi r3,r3,1
+ 58c:	34 63 00 01 	addi r3,r3,1
 		c = uart_getchar1();
 		if (c ==':'){
- 5e0:	20 21 00 ff 	andi r1,r1,0xff
- 5e4:	44 24 00 04 	be r1,r4,5f4 <wifi_getchar+0x40>
+ 590:	20 21 00 ff 	andi r1,r1,0xff
+ 594:	44 24 00 04 	be r1,r4,5a4 <wifi_getchar+0x40>
 }
 
 char wifi_getchar(){
 	char c='\n';
 	int i=0;
 	for(i=0;i<20;i++){
- 5e8:	5c 65 ff f9 	bne r3,r5,5cc <wifi_getchar+0x18>
+ 598:	5c 65 ff f9 	bne r3,r5,57c <wifi_getchar+0x18>
 			c = uart_getchar1();
 			return c;
 			break;
 		}
 	}
 	return '\n';
- 5ec:	34 01 00 0a 	mvi r1,10
+ 59c:	34 01 00 0a 	mvi r1,10
 
 }
- 5f0:	c3 a0 00 00 	ret
+ 5a0:	c3 a0 00 00 	ret
 	//uart1->div = (FCPU/(57600*16));
 }
 
 char uart_getchar1()
 {   
 	while (! (uart1->ucr & UART_DR)) ;
- 5f4:	28 41 00 00 	lw r1,(r2+0)
- 5f8:	20 21 00 01 	andi r1,r1,0x1
- 5fc:	44 20 ff fe 	be r1,r0,5f4 <wifi_getchar+0x40>
+ 5a4:	28 41 00 00 	lw r1,(r2+0)
+ 5a8:	20 21 00 01 	andi r1,r1,0x1
+ 5ac:	44 20 ff fe 	be r1,r0,5a4 <wifi_getchar+0x40>
 	return uart1->rxtx;
- 600:	28 41 00 04 	lw r1,(r2+4)
- 604:	20 21 00 ff 	andi r1,r1,0xff
+ 5b0:	28 41 00 04 	lw r1,(r2+4)
+ 5b4:	20 21 00 ff 	andi r1,r1,0xff
 	int i=0;
 	for(i=0;i<20;i++){
 		c = uart_getchar1();
 		if (c ==':'){
 			c = uart_getchar1();
 			return c;
- 608:	c3 a0 00 00 	ret
+ 5b8:	c3 a0 00 00 	ret
 
-0000060c <ok>:
+000005bc <ok>:
 		a=uart_getchar1();
 		if(a=='K'){
 			return 1;
 		}
 	}
 	return 0;
- 60c:	78 01 00 00 	mvhi r1,0x0
- 610:	38 21 08 0c 	ori r1,r1,0x80c
- 614:	28 22 00 00 	lw r2,(r1+0)
+ 5bc:	78 01 00 00 	mvhi r1,0x0
+ 5c0:	38 21 06 9c 	ori r1,r1,0x69c
+ 5c4:	28 22 00 00 	lw r2,(r1+0)
 }
 
 int ok(){
 	int i=0;
 	char a;
 	for(i=0;i<30;i++){
- 618:	34 03 00 00 	mvi r3,0
+ 5c8:	34 03 00 00 	mvi r3,0
 		a=uart_getchar1();
 		if(a=='K'){
- 61c:	34 04 00 4b 	mvi r4,75
+ 5cc:	34 04 00 4b 	mvi r4,75
 }
 
 int ok(){
 	int i=0;
 	char a;
 	for(i=0;i<30;i++){
- 620:	34 05 00 1e 	mvi r5,30
+ 5d0:	34 05 00 1e 	mvi r5,30
 	//uart1->div = (FCPU/(57600*16));
 }
 
 char uart_getchar1()
 {   
 	while (! (uart1->ucr & UART_DR)) ;
- 624:	28 41 00 00 	lw r1,(r2+0)
- 628:	20 21 00 01 	andi r1,r1,0x1
- 62c:	44 20 ff fe 	be r1,r0,624 <ok+0x18>
+ 5d4:	28 41 00 00 	lw r1,(r2+0)
+ 5d8:	20 21 00 01 	andi r1,r1,0x1
+ 5dc:	44 20 ff fe 	be r1,r0,5d4 <ok+0x18>
 	return uart1->rxtx;
- 630:	28 41 00 04 	lw r1,(r2+4)
+ 5e0:	28 41 00 04 	lw r1,(r2+4)
 }
 
 int ok(){
 	int i=0;
 	char a;
 	for(i=0;i<30;i++){
- 634:	34 63 00 01 	addi r3,r3,1
+ 5e4:	34 63 00 01 	addi r3,r3,1
 		a=uart_getchar1();
 		if(a=='K'){
- 638:	20 21 00 ff 	andi r1,r1,0xff
- 63c:	44 24 00 04 	be r1,r4,64c <ok+0x40>
+ 5e8:	20 21 00 ff 	andi r1,r1,0xff
+ 5ec:	44 24 00 04 	be r1,r4,5fc <ok+0x40>
 }
 
 int ok(){
 	int i=0;
 	char a;
 	for(i=0;i<30;i++){
- 640:	5c 65 ff f9 	bne r3,r5,624 <ok+0x18>
+ 5f0:	5c 65 ff f9 	bne r3,r5,5d4 <ok+0x18>
 		a=uart_getchar1();
 		if(a=='K'){
 			return 1;
 		}
 	}
 	return 0;
- 644:	34 01 00 00 	mvi r1,0
- 648:	c3 a0 00 00 	ret
+ 5f4:	34 01 00 00 	mvi r1,0
+ 5f8:	c3 a0 00 00 	ret
 	int i=0;
 	char a;
 	for(i=0;i<30;i++){
 		a=uart_getchar1();
 		if(a=='K'){
 			return 1;
- 64c:	34 01 00 01 	mvi r1,1
+ 5fc:	34 01 00 01 	mvi r1,1
 		}
 	}
 	return 0;
 
 }
- 650:	c3 a0 00 00 	ret
+ 600:	c3 a0 00 00 	ret
 
-00000654 <start_Read>:
+00000604 <i2c_prueba>:
+
 /******************************************************************************
  * i2c Functions
  */
-void start_Read (int r)
-{  
-	i2c0->startRead = r;
- 654:	78 02 00 00 	mvhi r2,0x0
- 658:	38 42 08 08 	ori r2,r2,0x808
- 65c:	28 42 00 00 	lw r2,(r2+0)
- 660:	58 41 00 14 	sw (r2+20),r1
+void i2c_prueba(){
+	i2c0->	CR 	= 0x02 & txr;
+ 604:	78 01 00 00 	mvhi r1,0x0
+ 608:	38 21 06 98 	ori r1,r1,0x698
+ 60c:	28 21 00 00 	lw r1,(r1+0)
+ 610:	34 02 00 02 	mvi r2,2
+ 614:	30 22 00 01 	sb (r1+1),r2
+	i2c0->	TXR 	= 0x5;
+ 618:	34 02 00 05 	mvi r2,5
+ 61c:	30 22 00 00 	sb (r1+0),r2
+	i2c0->	CR 	= 0x10;
+ 620:	34 02 00 10 	mvi r2,16
+ 624:	30 22 00 01 	sb (r1+1),r2
 }
- 664:	c3 a0 00 00 	ret
-
-00000668 <start_Write>:
-
-void start_Write (int w)
-{  
-	i2c0->startWrite = w;
- 668:	78 02 00 00 	mvhi r2,0x0
- 66c:	38 42 08 08 	ori r2,r2,0x808
- 670:	28 42 00 00 	lw r2,(r2+0)
- 674:	58 41 00 18 	sw (r2+24),r1
-}
- 678:	c3 a0 00 00 	ret
-
-0000067c <rw>:
-
-void rw(int data_rw)
-{
-	i2c0->rw = data_rw;
- 67c:	78 02 00 00 	mvhi r2,0x0
- 680:	38 42 08 08 	ori r2,r2,0x808
- 684:	28 42 00 00 	lw r2,(r2+0)
- 688:	58 41 00 0c 	sw (r2+12),r1
-}
- 68c:	c3 a0 00 00 	ret
-
-00000690 <i2c_write>:
-
-void i2c_write (int dirI2C, int dirIntern, int data)
-{		
- 690:	37 9c ff ec 	addi sp,sp,-20
- 694:	5b 8b 00 14 	sw (sp+20),r11
- 698:	5b 8c 00 10 	sw (sp+16),r12
- 69c:	5b 8d 00 0c 	sw (sp+12),r13
- 6a0:	5b 8e 00 08 	sw (sp+8),r14
- 6a4:	5b 9d 00 04 	sw (sp+4),ra
-	i2c0->startRead = r;
-}
-
-void start_Write (int w)
-{  
-	i2c0->startWrite = w;
- 6a8:	78 0b 00 00 	mvhi r11,0x0
- 6ac:	39 6b 08 08 	ori r11,r11,0x808
- 6b0:	29 64 00 00 	lw r4,(r11+0)
-{
-	i2c0->rw = data_rw;
-}
-
-void i2c_write (int dirI2C, int dirIntern, int data)
-{		
- 6b4:	b8 20 68 00 	mv r13,r1
-	start_Write(data);
-	msleep(1);
- 6b8:	34 01 00 01 	mvi r1,1
-	i2c0->startRead = r;
-}
-
-void start_Write (int w)
-{  
-	i2c0->startWrite = w;
- 6bc:	58 83 00 18 	sw (r4+24),r3
-{
-	i2c0->rw = data_rw;
-}
-
-void i2c_write (int dirI2C, int dirIntern, int data)
-{		
- 6c0:	b8 60 60 00 	mv r12,r3
- 6c4:	b8 40 70 00 	mv r14,r2
-	start_Write(data);
-	msleep(1);
- 6c8:	fb ff ff 26 	calli 360 <msleep>
-	i2c0->startRead = r;
-}
-
-void start_Write (int w)
-{  
-	i2c0->startWrite = w;
- 6cc:	29 64 00 00 	lw r4,(r11+0)
- 6d0:	58 80 00 18 	sw (r4+24),r0
-}
-
-void rw(int data_rw)
-{
-	i2c0->rw = data_rw;
- 6d4:	58 80 00 0c 	sw (r4+12),r0
-{		
-	start_Write(data);
-	msleep(1);
-	start_Write(0);
-	rw(0); 
-	while((i2c0->availWrite)==0x00);
- 6d8:	28 85 00 04 	lw r5,(r4+4)
- 6dc:	44 a0 ff ff 	be r5,r0,6d8 <i2c_write+0x48>
-	i2c0->data = ((dirI2C<<16)|(dirIntern<<8)|data);	
- 6e0:	3d c2 00 08 	sli r2,r14,8
- 6e4:	3d a1 00 10 	sli r1,r13,16
- 6e8:	b9 82 60 00 	or r12,r12,r2
- 6ec:	b9 81 60 00 	or r12,r12,r1
- 6f0:	58 8c 00 10 	sw (r4+16),r12
-
-}
- 6f4:	2b 9d 00 04 	lw ra,(sp+4)
- 6f8:	2b 8b 00 14 	lw r11,(sp+20)
- 6fc:	2b 8c 00 10 	lw r12,(sp+16)
- 700:	2b 8d 00 0c 	lw r13,(sp+12)
- 704:	2b 8e 00 08 	lw r14,(sp+8)
- 708:	37 9c 00 14 	addi sp,sp,20
- 70c:	c3 a0 00 00 	ret
-
-00000710 <i2c_read>:
-
-int8_t i2c_read (int dirI2C, int dirIntern){  
- 710:	37 9c ff ec 	addi sp,sp,-20
- 714:	5b 8b 00 14 	sw (sp+20),r11
- 718:	5b 8c 00 10 	sw (sp+16),r12
- 71c:	5b 8d 00 0c 	sw (sp+12),r13
- 720:	5b 8e 00 08 	sw (sp+8),r14
- 724:	5b 9d 00 04 	sw (sp+4),ra
-/******************************************************************************
- * i2c Functions
- */
-void start_Read (int r)
-{  
-	i2c0->startRead = r;
- 728:	78 0b 00 00 	mvhi r11,0x0
- 72c:	39 6b 08 08 	ori r11,r11,0x808
- 730:	29 63 00 00 	lw r3,(r11+0)
- 734:	34 0d 00 01 	mvi r13,1
-	while((i2c0->availWrite)==0x00);
-	i2c0->data = ((dirI2C<<16)|(dirIntern<<8)|data);	
-
-}
-
-int8_t i2c_read (int dirI2C, int dirIntern){  
- 738:	b8 20 60 00 	mv r12,r1
-/******************************************************************************
- * i2c Functions
- */
-void start_Read (int r)
-{  
-	i2c0->startRead = r;
- 73c:	58 6d 00 14 	sw (r3+20),r13
-
-}
-
-int8_t i2c_read (int dirI2C, int dirIntern){  
-	start_Read(1);
-	msleep(1);
- 740:	34 01 00 01 	mvi r1,1
-	while((i2c0->availWrite)==0x00);
-	i2c0->data = ((dirI2C<<16)|(dirIntern<<8)|data);	
-
-}
-
-int8_t i2c_read (int dirI2C, int dirIntern){  
- 744:	b8 40 70 00 	mv r14,r2
-	start_Read(1);
-	msleep(1);
- 748:	fb ff ff 06 	calli 360 <msleep>
-/******************************************************************************
- * i2c Functions
- */
-void start_Read (int r)
-{  
-	i2c0->startRead = r;
- 74c:	29 63 00 00 	lw r3,(r11+0)
-int8_t i2c_read (int dirI2C, int dirIntern){  
-	start_Read(1);
-	msleep(1);
-	start_Read(0);
-	rw(1);
-	while((i2c0->availRead)==0x04);
- 750:	34 05 00 04 	mvi r5,4
-/******************************************************************************
- * i2c Functions
- */
-void start_Read (int r)
-{  
-	i2c0->startRead = r;
- 754:	58 60 00 14 	sw (r3+20),r0
-	i2c0->startWrite = w;
-}
-
-void rw(int data_rw)
-{
-	i2c0->rw = data_rw;
- 758:	58 6d 00 0c 	sw (r3+12),r13
-int8_t i2c_read (int dirI2C, int dirIntern){  
-	start_Read(1);
-	msleep(1);
-	start_Read(0);
-	rw(1);
-	while((i2c0->availRead)==0x04);
- 75c:	28 64 00 08 	lw r4,(r3+8)
- 760:	44 85 ff ff 	be r4,r5,75c <i2c_read+0x4c>
-	i2c0->data = ((dirI2C<<15)|(dirIntern<<7)|dirI2C);
- 764:	3d 81 00 0f 	sli r1,r12,15
- 768:	3d c2 00 07 	sli r2,r14,7
- 76c:	b8 2c 60 00 	or r12,r1,r12
- 770:	b9 82 60 00 	or r12,r12,r2
- 774:	58 6c 00 10 	sw (r3+16),r12
-	return i2c0->i2c_data_out;
- 778:	28 61 00 00 	lw r1,(r3+0)
-}
- 77c:	b0 20 08 00 	sextb r1,r1
- 780:	2b 9d 00 04 	lw ra,(sp+4)
- 784:	2b 8b 00 14 	lw r11,(sp+20)
- 788:	2b 8c 00 10 	lw r12,(sp+16)
- 78c:	2b 8d 00 0c 	lw r13,(sp+12)
- 790:	2b 8e 00 08 	lw r14,(sp+8)
- 794:	37 9c 00 14 	addi sp,sp,20
- 798:	c3 a0 00 00 	ret
+ 628:	c3 a0 00 00 	ret

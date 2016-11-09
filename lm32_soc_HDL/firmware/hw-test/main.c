@@ -25,7 +25,7 @@ int  main(){
 	}
 	*/
 
-	init_wifi();
+	/*init_wifi();
 	char i=0;
 	char a=0x30;
 	for(i; i<=9; i++) {
@@ -33,10 +33,13 @@ int  main(){
 		uart_putstr1("\r\n");
 		nsleep(2016300);
 		a++;
-	}
+	}d 
 	
 }
+*/
 
+i2c_prueba();
+}
 
 /*inline void writeint(uint32_t val)
 {

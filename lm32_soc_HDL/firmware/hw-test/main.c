@@ -5,164 +5,100 @@
 #include "soc-hw.h"
 
 int  main(){
-	/*char a;
-	for(a=1; a<8; a++){
-		a=a+1;
-		uart_putchar1(a);
-		nsleep(101630);
-	}
 	isr_init();
 	tic_init();
 	irq_enable();
 	
-	uint32_t i;
-	
-	
-	for(i=1; i<=10; i++) {
-		uart_putchar1(i);    
-		//i2c_write(ADDRESS_I2C,CH1,10);
-		nsleep(101630);
-	}
-	*/
-
-	/*init_wifi();
-	char i=0;
+	init_wifi();
+/*	char i=0;
 	char a=0x30;
 	for(i; i<=9; i++) {
 		wifi_putchar(a);
 		uart_putstr1("\r\n");
 		nsleep(2016300);
 		a++;
-	}d 
-	
-}
+	}
 */
-
-i2c_prueba();
-}
-
-/*inline void writeint(uint32_t val)
-{
-	uint32_t i, digit;o
-
-	for (i=0; i<8; i++) {
-		digit = (val & 0xf0000000) >> 28;
-		if (digit >= 0xA) 
-			uart_putchar('A'+digit-10);
-		else
-			uart_putchar('0'+digit);
-		val <<= 4;
-	}
-}
-
-
-
-char glob[] = "Global";
-
-volatile uint32_t *p;
-volatile uint8_t *p2;
-
-extern uint32_t tic_msec;
-
-int main()
-{
-	uint32_t aa,bb; 
-for(;;)
-	 uart_putchar('1');
-	 uart_putchar('2');
-	 uart_putchar('3');
-	 uart_putchar('1');
-	  aa=1;
-	   prueba();
-   uart_putchar('b');
-
-   char test2[] = "Lokalerstr";
-   char *str = test2;
-   uint32_t i;
-
-	// Say Hello!
-	uart_putstr( "** Spike Test Firmware **\n" );
-
-	// Initialize TIC
-	isr_init();
-	tic_init();
-	irq_set_mask( 0x00000002 );
-	irq_enable();
-
-	// Say Hello!
-	uart_putstr( "Timer Interrupt instelled.\n" );
-
-	// Do some trivial tests
-	uart_putstr( "Subroutine-Return Test: " );
-	test();
-	uart_putchar('\n');    
-
-	uart_putstr( "Local-Pointer Test:" );
-	for (;*str; str++) {
-	   uart_putchar(*str);
-	}
-	uart_putchar('\n');    
-	
-	uart_putstr( "Global-Pointer Test:" );
-	str = glob;
-	for (;*str; str++) {
-	   uart_putchar(*str);
-	}
-	uart_putchar('\n');    
-
-	uart_putstr( "Stack Pointer : " );
-	writeint(get_sp());
-	uart_putchar('\n');    
-
-	uart_putstr( "Global Pointer: " );
-	writeint(get_gp());
-	uart_putchar('\n');    
-
-	uart_putstr( "Timer Test (1s): " );
-	for(i=0; i<4; i++) {
-		uart_putstr("tic...");    
-		msleep(1000);
-	}
-	uart_putchar('\n');    
-
-	uart_putstr( "Timer Interrupt counter: " );
-	writeint( tic_msec );
-	uart_putchar('\n');    
-
-	int val = tic_msec;
-	uart_putstr( "Shift: " );
-	writeint( val );
-	uart_putstr(" <-> ");    
-	for(i=0; i<32; i++) {
-		if (val & 0x80000000)
-			uart_putchar( '1' );
-		else
-			uart_putchar( '0' );
-			
-		val <<= 1;
-	}
-	uart_putstr("\r\n");
-*/
-/*
-	uart_putstr( "GPIO Test..." );
-	gpio0->oe = 0x000000ff;
-	for(;;) {
-		for(i=0; i<8; i++) {
-			uint32_t out1, out2;
-
-			out1 = 0x01 << i;
-			out2 = 0x80 >> i;
-			gpio0->out = out1 | out2;
-
-			msleep(100);
+	char c;
+	char d;
+	char j;
+	char k;
+	//char l;
+	//char m;
+	//char n;
+	//char o;
+	int e;
+	e=0;	
+	do{	
+		ReadChanel(0x00);	
+		c=GetByteOne();
+		ReadChanel(0x01);
+		d=GetByteOne();
+		ReadChanel(0x02);
+		j=GetByteOne();
+		ReadChanel(0x03);
+		k=GetByteOne();
+		uart_putchar(c);
+		uart_putchar(d);
+		uart_putchar(j);
+		uart_putchar(k);
+		uart_putchar(0);
+		if(((c<=98)&(c>=82))&((d<=98)&(d>=80))&((j<=98)&(j>=82))&((k<=72)&(k>=58))){
+		uart_putchar(1);
+		wifi_putchar(0x61);
 		}
-	}
-*/
+		/*ReadChanel(0x02);
+		j=GetByteOne();
+		k=GetByteTwo();
+		ReadChanel(0x01);	
+		l=GetByteOne();
+	        m=GetByteTwo();
+		ReadChanel(0x00);
+		n=GetByteOne();
+		o=GetByteTwo();
+		uart_putchar(c);
+		c=0;
+		uart_putchar(c);
+		uart_putchar(d);
+		d=0;
+		uart_putchar(d);
+		uart_putchar(1);
+		uart_putchar(j);
+		j=0;
+		uart_putchar(j);
+		uart_putchar(k);
+		k=0;
+		uart_putchar(k);
+		uart_putchar(1);
+		uart_putchar(l);
+		l=0;
+		uart_putchar(l);
+		uart_putchar(m);
+		m=0;
+		uart_putchar(m);
+		uart_putchar(1);
+		uart_putchar(n);
+		n=0;
+		uart_putchar(n);
+		uart_putchar(n);
+		n=0;
+		uart_putchar(n);
+		uart_putchar(1);
 
-/*
-	uart_putstr("Entering Echo Test...\n");
-	while (1) {
-	   uart_putchar(uart_getchar());
-	}
+//if((c==30)&((d==225)||(d==226)||(d==227)||(d==228))){
+		//wifi_putchar(c);
+		//j=0x34;
+		//wifi_putchar(j);
+		//c=0x30;
+	        //uart_putchar(c);
+		//wifi_putchar(c);
+		//nsleep(201300);
+		//wifi_putchar(d);
+		//uart_putchar(d);
+		//d=0x30;
+                //uart_putchar(d);
+		//wifi_putchar(d);
+    //}
+*/	}while(e==0);	
+
 }
-*/

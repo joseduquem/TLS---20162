@@ -11,12 +11,12 @@ NET "led"	LOC = "T8"	| IOSTANDARD = "LVCMOS33";
 # ==== UART0 ====
 NET "uart_txd"	LOC = "D4"	| IOSTANDARD = "LVCMOS33";		
 NET "uart_rxd"	LOC = "C4"	| IOSTANDARD = "LVCMOS33";
-
+		
 # ==== UART1 ====
-NET "uart_txd1"	LOC = "B13"	| IOSTANDARD = "LVCMOS33";		
-NET "uart_rxd1"	LOC = "E17"	| IOSTANDARD = "LVCMOS33";		
+NET "uart_txd1"	LOC = "B13"	| IOSTANDARD = "LVCMOS33";	#JA1
+NET "uart_rxd1"	LOC = "F14"	| IOSTANDARD = "LVCMOS33";	#JA2	
 
 # ==== I2C ====
-#NET "i2c_sda"	LOC = "V9"	| IOSTANDARD = "LVCMOS33";		
-#NET "i2c_clk"	LOC = "R8"	| IOSTANDARD = "LVCMOS33";		
+NET "i2c_sda"	LOC = "D17"	| IOSTANDARD = "LVCMOS33";	#JA3	
+NET "i2c_scl"	LOC = "E17"	| IOSTANDARD = "LVCMOS33";	#JA4 	
 

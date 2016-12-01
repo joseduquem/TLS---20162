@@ -1,7 +1,7 @@
-INFILE=/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/build/system-routed.ncd
-OUTFILE=/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/build/system.bit
+INFILE=/home/joseduquem/Escritorio/lm32_soc_HDL/build/system-routed.ncd
+OUTFILE=/home/joseduquem/Escritorio/lm32_soc_HDL/build/system.bit
 FAMILY=Artix7
 PART=xc7a100t-3csg324
-WORKINGDIR=/home/joseduquem/Escritorio/TLS---20162/lm32_soc_HDL/build
+WORKINGDIR=/home/joseduquem/Escritorio/lm32_soc_HDL/build
 LICENSE=WebPack
 USER_INFO=211169441_0_0_355

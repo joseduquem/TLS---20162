@@ -37,14 +37,14 @@ SRC=                                      \
 	../rtl/wb_bram/wb_bram.v           \
 	../rtl/wb_uart/wb_uart.v           \
 	../rtl/wb_timer/wb_timer.v         \
-	../rtl/wb_gpio/wb_gpio.v           \
-	../rtl/wb_spi/wb_spi.v             \
+	../rtl/wb_i2c/Controller.v 	\
+	../rtl/wb_i2c/Generator.v	\
 	../rtl/wb_i2c/i2c_master_wb_top.v  \
-	../rtl/wb_i2c/i2c_master_registers.v  \
-	../rtl/wb_i2c/i2c_master_byte_ctrl.v  \
-	../rtl/wb_i2c/i2c_master_bit_ctrl.v  \
+	../rtl/wb_i2c/i2cModule.v	\
+	../rtl/wb_i2c/WriterAndReader.v \
 	../rtl/wb_conbus/conbus.v          \
 	../rtl/wb_conbus/conbus_arb.v      
+
 
 #############################################################################
 # Synthesis constants
@@ -137,7 +137,8 @@ usage: system-routed.xdl
 
 
 upload: system.bit
-	sudo fpgaprog -v -f system.bit 
+	#sudo fpgaprog -v -f system.bit 
+	sudo djtgcfg prog -d Nexys4DDR --index 0 --file system.bit
 
 
 ####################################################################

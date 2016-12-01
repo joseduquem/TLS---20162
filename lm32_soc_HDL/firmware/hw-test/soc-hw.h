@@ -69,19 +69,6 @@ void tic_init();
 
 
 /***************************************************************************
- * GPIO0
- */
-typedef struct {
-	volatile uint32_t ctrl;
-	volatile uint32_t dummy1;
-	volatile uint32_t dummy2;
-	volatile uint32_t dummy3;
-	volatile uint32_t in;
-	volatile uint32_t out;
-	volatile uint32_t oe;
-} gpio_t;
-
-/***************************************************************************
  * UART0
  */
 #define UART_DR   0x01                    // RX Data Ready
@@ -109,46 +96,37 @@ char wifi_getchar();
 int ok();
 
 /***************************************************************************
- * SPI0
- */
-
-typedef struct {
-   volatile uint32_t rxtx;
-   volatile uint32_t nop1;
-   volatile uint32_t cs;
-   volatile uint32_t nop2;
-   volatile uint32_t divisor;
-} spi_t;
-
-void spi_init();
-void spi_putchar(char c);
-char spi_getchar();
-
-/***************************************************************************
  * I2C0
  */
-#define txr 0x03
+#define txr 		0x03
+#define rxr		0x03
+#define cr		0x04
+#define ADDRESS_I2C	0x68
+#define CH1 		0x40 
+#define CH2	        0x44
+#define CH3	        0x48
+#define CH4 		0x52
+
 typedef struct {
-   volatile uint8_t TXR;
-   volatile uint8_t CR;	
-   volatile uint32_t PRER;	
-	
+   volatile uint32_t Busy;
+   volatile uint32_t ByteReadedOne;
+   volatile uint32_t ByteReadedTwo;
+   volatile uint32_t ByteConfigurationOne;
+   volatile uint32_t ByteConfigurationTwo;
+   volatile uint32_t Start;
 } i2c_t;
-//UART0
 
-void i2c_prueba();
-
-
+void ReadChanel(char ch);
+char GetByteOne();
+char GetByteTwo();
 
 /***************************************************************************
  * Pointer to actual components
  */
+extern i2c_t  *i2c0;
 extern timer_t  *timer0;
-extern i2c_t    *i2c0;
 extern uart_t   *uart0; 
 extern uart_t   *uart1;
-extern gpio_t   *gpio0; 
 extern uint32_t *sram0; 
-
 
 #endif // SPIKEHW_H

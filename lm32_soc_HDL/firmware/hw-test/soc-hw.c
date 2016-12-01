@@ -1,11 +1,9 @@
 #include "soc-hw.h"
 
 uart_t  *uart0  = (uart_t *)   	0x20000000;
-timer_t *timer0 = (timer_t *)   0x30000000;
-gpio_t *gpio0 	= (gpio_t *)	0x40000000;
+uart_t  *uart1  = (uart_t *)  	0x30000000;
+timer_t *timer0 = (timer_t *)   0x40000000;
 i2c_t   *i2c0   = (i2c_t *)    	0x50000000;
-uart_t  *uart1  = (uart_t *)  	0x60000000;
-//pwm_t *pwm0     = (pwm_t *)     0x70000000;
 
 isr_ptr_t isr_table[32];
 
@@ -173,7 +171,7 @@ void uart_putstr1(char *str)
 
 void init_wifi(){ //configurar el modulo como estación con puerto 80
 	//uart_putstr1("AT+RST\r\n");
-	nsleep(2016300);
+	//nsleep(2016300);
 	//int c = 0;
 	//while(c==0){
 		uart_putstr1("AT+CIPMUX=0\r\n");
@@ -188,7 +186,7 @@ void init_wifi(){ //configurar el modulo como estación con puerto 80
 	//}
 	//c = 0;
 	//while (c==0){
-		uart_putstr1("AT+CIPSTART=\"TCP\",\"192.168.4.2\",80\r\n");
+		uart_putstr1("AT+CIPSTART=\"TCP\",\"192.168.4.2\",1234\r\n");
 		//c = ok();
 		nsleep(2016300);
 		uart_putstr1("AT+CIPSEND\r\n");
@@ -232,11 +230,47 @@ int ok(){
 
 }
 
-/******************************************************************************
- * i2c Functions
- */
-void i2c_prueba(){
-	i2c0->	CR 	= 0x02 & txr;
-	i2c0->	TXR 	= 0x5;
-	i2c0->	CR 	= 0x10;
+/*********************************************************
+I2C 
+*/
+/*
+StartCond"BOTH"
+Write"BOTH"
+Potiner"BOTH"
+Read"BOTH"
+Stop"BOTH"
+ByteReaded"READ"
+ByteToWrite"WRITE
+*/
+
+void ReadChanel(char ch){
+	switch(ch){
+	   case 0x00:
+		i2c0->ByteConfigurationOne=0xC3;
+	   break;
+	   case 0x01:
+		i2c0->ByteConfigurationOne=0xD3;
+	   break;
+	   case 0x02:
+		i2c0->ByteConfigurationOne=0xE3;
+	   break;
+	   case 0x03:
+		i2c0->ByteConfigurationOne=0xF3;
+	   break;
+	   default:
+		i2c0->ByteConfigurationOne=0xC3;
+	   break;
+	}
+	i2c0->ByteConfigurationTwo=0X83;//FS 4.096 volts although this is more than electrical especifications,there never be more than 3.6
+	i2c0->Start=0x01;
+	while((i2c0->Busy)==0x01);
+}
+
+
+char GetByteOne(){
+	return i2c0->ByteReadedOne;
+}
+char GetByteTwo()
+{
+	return i2c0->ByteReadedTwo;
 }
